@@ -1,0 +1,39 @@
+<div>
+    <h3> Upload Templates </h3>
+	<form name="UploadTemplate">
+	<div id="displayErrorMsg_uploadFormTemplates"> </div>
+	<div id="displayInfoMsg_uploadFormTemplates"> </div>
+	<div class="l_main_area">
+		<div class="l_row">
+			<div class="l_column_thirds">
+				<label for="formNum_uploadFormTemplates">Form # :</label> 
+					<input type="text" id="formNum_uploadFormTemplates" data-dojo-type="dijit/form/TextBox" />
+				
+				<label for="revDate_uploadFormTemplates">Revision Date :</label>
+					<input type="text" id="revDate_uploadFormTemplates" data-dojo-type="dijit/form/TextBox" />
+				
+				<label for="formDesc_uploadFormTemplates">Form Description :</label>
+					<input type="text" id="formDesc_uploadFormTemplates" data-dojo-type="dijit/form/TextBox" />
+				
+				<label for="formTmpltType_uploadFormTemplates" id = "formTmplTpLbl_uploadFormTemplates">Form Template Type :</label>
+				<select id="formTmpltType_uploadFormTemplates" 
+					style="width: 150px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props = "value:' ',placeHolder:'Loading..'"></select> 
+				
+		</div>
+		<div class="l_column_thirds">
+		</div>
+		<div class="l_column_thirds">
+		</div>
+	</div>
+    
+    <div class="l_row_pad">
+        <div id="puploader">
+            <p>Your browser doesn't support HTML5</p>
+        </div>
+    </div>
+	
+	<!-- <button id="cancelBtn_uploadFormTemplates" type="button" data-dojo-type="dijit/form/Button">Cancel</button> -->
+	<button id="doneBtn_uploadFormTemplates" type="button" data-dojo-type="dijit/form/Button">Done</button>
+	</form>
+	
+</div>

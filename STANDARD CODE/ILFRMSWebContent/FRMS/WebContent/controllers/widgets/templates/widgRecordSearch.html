@@ -1,0 +1,20 @@
+<div class="${baseClass}">
+    <form data-dojo-attach-point="form_recordSearch" data-dojo-type="dijit/form/Form" encType="multipart/form-data" action="" method="">
+            <label for="txtRecordNumber_recordsSearch">Record Number</label>
+            <input type="text" data-dojo-attach-point="txtRecordNumber_recordsSearch" data-dojo-type="dijit/form/TextBox" />
+            <label for="txtRecordTitle_recordsSearch">Record Title</label>
+            <input type="text" data-dojo-attach-point="txtRecordTitle_recordsSearch" data-dojo-type="dijit/form/TextBox" />
+            <label for="ddlRecordSource_recordsSearch">Record Source</label>
+            <select data-dojo-attach-point="ddlRecordSource_recordsSearch" data-dojo-type="dojox/form/CheckedMultiSelect" data-dojo-props="dropDown: true, multiple: true, 
+                    required: false">
+                <option value="0">Internal</option>
+                <option value="1">External</option>
+            </select>
+            <label for="asOfDate_recordsSearch">As of Date</label>
+            <input type="text" data-dojo-attach-point="asOfDate_recordsSearch" data-dojo-type="dijit/form/DateTextBox" />
+            <div class="l_row_pad">
+                <button data-dojo-attach-point="btnSearch_recordsSearch" type="button" data-dojo-type="dijit/form/Button">Search</button>
+                <button data-dojo-attach-point="btnClear_recordsSearch" type="button" data-dojo-type="dijit/form/Button">Clear</button>
+            </div>
+    </form>
+</div>

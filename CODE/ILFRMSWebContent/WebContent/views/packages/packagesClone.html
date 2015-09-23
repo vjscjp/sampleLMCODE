@@ -1,0 +1,33 @@
+<div class="l_main_area">
+    <h3>Packages Clone</h3>
+    <form data-dojo-type="dijit/form/Form" id="form_packageClone">
+    <div class="l_row_pad">
+        <div class="l_column">
+            <div class="l_rounded_border_column">
+                <label>Original Package</label>
+                <input type="text" disabled id="txtPackageName_packageClone" data-dojo-type="dijit/form/TextBox"/>
+
+                <label>Package Iteration</label>
+                <input type="text" disabled id="txtPackageIteration_packageClone" data-dojo-type="dijit/form/TextBox"/>
+
+                <label>* Target Package</label>
+                <select id="selPackageTarget_packageClone" data-dojo-type="dijit/form/Select" data-dojo-props="sortByLabel: false" required="true"></select>
+                
+                <label>* New Effective Date</label>
+                <input id="txtEffective_packageClone" data-dojo-id="txtEffective_packageClone" data-dojo-type="dijit/form/DateTextBox" onChange="txtExpiration_packageClone.constraints.min = arguments[0];" required="true" />
+
+                <label>New Expiration Date</label>
+                <input id="txtExpiration_packageClone" data-dojo-id="txtExpiration_packageClone" data-dojo-type="dijit/form/DateTextBox" onChange="txtEffective_packageClone.constraints.max = arguments[0];" />
+
+            </div><!--l_rounded_border-->
+        </div><!--l_column-->
+        
+    </div><!--l_row_pad-->
+    
+    <div class="l_row_pad">
+        <button id="btnSearch_packageClone" type="button" data-dojo-type="dijit/form/Button">Clone</button>
+        <button id="btnClear_packageClone" type="button" data-dojo-type="dijit/form/Button">Cancel</button>  
+    </div>
+    </form>
+    
+</div>

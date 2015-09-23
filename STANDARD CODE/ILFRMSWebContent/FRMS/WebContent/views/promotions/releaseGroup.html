@@ -1,0 +1,21 @@
+<div class="l_main_area">
+    <h3>Release Group</h3>
+    <div class="l_column_thirds">
+        <label for="txtReleaseGrpName_releaseGroup">Name</label>
+        <input type="text" id="txtReleaseGrpName_releaseGroup" data-dojo-type="dijit/form/ValidationTextBox" maxLength="80" data-dojo-props="disabled: true" /> 
+        <label for="selectReleaseGroupVersion_releaseGroup">Versions</label>
+            <select data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="identifier: 'value', searchAttr: 'name'" 
+                id="selectReleaseGroupVersion_releaseGroup" name="selectReleaseGroupVersion_releaseGroup"></select>
+        <label for="txtStatus_releaseGroup">Status</label>
+        <input type="text" id="txtStatus_releaseGroup" data-dojo-type="dijit/form/TextBox" data-dojo-props="disabled: true"/>
+        <label for="txtLastModBy_releaseGroup">Last Modified By</label>
+        <input type="text" id="txtLastModBy_releaseGroup" data-dojo-type="dijit/form/TextBox" data-dojo-props="disabled: true"/>
+    </div>
+    <div class="l_row_pad">
+        <div id="documentsGrid_releaseGroup"></div>
+        <button id="btnAdd_releaseGroup" type="button" data-dojo-type="dijit/form/Button">Add</button>
+        <button id="btnSave_releaseGroup" type="button" data-dojo-type="dijit/form/Button">Save</button>
+        <button id="btnPromote_releaseGroup" type="button" data-dojo-type="dijit/form/Button">Promote</button>
+        <button id="btnCancel_releaseGroup" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+    </div>
+</div>

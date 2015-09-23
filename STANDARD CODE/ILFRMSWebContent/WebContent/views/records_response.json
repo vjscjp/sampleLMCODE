@@ -1,0 +1,57 @@
+[{ 
+	"id": 1, 
+	"recordTitle": "HIV Disclosure", 
+	"recordNumber": "Test RecordNumber 1",
+	"expirationDate": "2014-08-02" 
+},
+{ 
+	"id": 2, 
+	"recordSource": "Internal", 
+	"recordTitle": "HIV Disclosure", 
+	"recordNumber": "Test RecordNumber 2", 
+	"classCd": "11111", 
+	"classNm": "Disclosure", 
+	"subClassCd": "22222", 
+	"subClassNm": "HIV", 
+	"effectiveDate": "2000-07-02", 
+	"expirationDate": "2014-07-02",  
+	"timingCodes": [{
+						"cd": "1043400001",
+						"nm": "POS",
+						"desc": null,
+						"effDtTm": "2000-01-01 00:00:00",
+						"endDtTm": "9999-12-31 00:00:00"
+					},   
+					{
+						"cd": "1043400002",
+						"nm": "Delivery",
+						"desc": null,
+						"effDtTm": "2000-01-01 00:00:00",
+						"endDtTm": "9999-12-31 00:00:00"
+					}]
+},
+{
+	"id": 3,
+	"recordSource": "Internal", 
+	"recordTitle": "HIV Disclosure", 
+	"recordNumber": "Test RecordNumber 3", 
+	"classCd": "11111", 
+	"classNm": "Disclosure", 
+	"subClassCd": "22222", 
+	"subClassNm": "HIV", 
+	"effectiveDate": "2000-07-03", 
+	"expirationDate": null, 
+	"timingCodes": [{
+						"cd": "1043400001",
+						"nm": "POS",
+						"desc": null,
+						"effDtTm": "2000-01-01 00:00:00",
+						"endDtTm": "9999-12-31 00:00:00"},
+					{
+						"cd": "1043400003",
+						"nm": "In Process",
+						"desc": null,
+						"effDtTm": "2000-01-01 00:00:00",
+						"endDtTm": "9999-12-31 00:00:00"
+					}]
+}]

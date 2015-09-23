@@ -1,0 +1,1156 @@
+@import url(/common/fonts/stylesheet.css);
+/* normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 9, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 19, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 43, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 55, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 65, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 76, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 87, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 96, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 107, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 116, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 124, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 133, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 142, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 151, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 160, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 167, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 171, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 182, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 190, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 201, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 209, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 219, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 230, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 254, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 264, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 276, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 291, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 301, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 310, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 320, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 333, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 345, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 355, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 369, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 377, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 388, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 397, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 406, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 417, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 423, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+td,
+th {
+  padding: 0;
+}
+
+/* line 432, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+.dijitCalendarPopup, .dijitCalendarPopup * {
+  font-size: 12px !important;
+}
+
+/* line 436, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_reset.scss */
+.dojoxGrid * {
+  font-size: 12px !important;
+}
+
+/* line 9, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_helpers.scss */
+.flt, .l_column_fourths, .l_column_thirds, .l_column_half, .l_left_labels label, .l_left_labels .l_right_inputs, .l_input_float, #loadingOverlay, .l_head_title, .l_head_title .l_head_title_in .l_logo, .l_head_title .l_head_title_in .l_logo_text, .l_footer .l_footer_left, .l_footer .l_footer_right, .l_head_tabs_out, .l_head_tabs_out .l_head_tabs .l_head_tab, .l_head_tabs_out .l_head_tabs .l_head_tab a, .l_left_nav ul li button b {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: -4px;
+}
+
+/* line 15, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_helpers.scss */
+fieldset {
+  border-radius: 6px;
+}
+
+/* line 30, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_helpers.scss */
+fieldset, .l_left_nav, .l_main_area {
+  padding: 7px 10px;
+}
+
+/* line 33, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_helpers.scss */
+.hidden {
+  display: none;
+}
+
+/* line 8, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_base.scss */
+html {
+  font-size: 16px;
+}
+
+/* line 12, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_base.scss */
+body {
+  color: #616265;
+  font-family: "Arial";
+  font-size: 100%;
+  line-height: 1.2;
+  background: url(/common/images/bkg.jpg) repeat-x;
+  background-attachment: fixed;
+}
+
+/* line 30, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_base.scss */
+a {
+  color: #569099;
+  text-decoration: none;
+}
+
+/* line 34, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_base.scss */
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+/* line 41, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_base.scss */
+fieldset {
+  border: 1px dotted #a1a2a5;
+}
+
+/* line 46, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_base.scss */
+legend {
+  color: #5381ac;
+  font-weight: bold;
+}
+
+/* line 51, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_base.scss */
+label {
+  display: block;
+  padding: 0px 0 2px 0;
+}
+
+/* line 57, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_base.scss */
+textarea {
+  width: 240px;
+}
+
+/* line 20, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_pull_right {
+  text-align: right;
+}
+
+/* line 24, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l-block {
+  display: block;
+}
+
+/* line 28, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l-condense {
+  margin-bottom: 0.625rem;
+}
+
+/* line 31, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l-pullLeft {
+  float: left;
+}
+
+/* line 35, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l-space {
+  margin-bottom: 1.25rem;
+}
+
+/* line 38, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l-xspace {
+  margin-bottom: 2.5rem;
+}
+
+/* line 42, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 50, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_column_fourths, .l_column_thirds, .l_column_half, .l_column {
+  padding: 0px 0 0px 0;
+}
+
+/* line 54, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_column_fourths {
+  width: 33%;
+}
+
+/* line 59, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_column_thirds {
+  width: 33%;
+}
+
+/* line 64, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_column_half {
+  width: 50%;
+}
+
+/* line 69, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_column {
+  width: 100%;
+}
+
+/* line 76, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_row label, .l_row_pad label {
+  padding: 10px 0 2px 0;
+}
+
+/* line 80, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_row_pad {
+  padding: 16px 0 4px 0;
+}
+
+/* line 86, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_left_labels label {
+  padding: 0px 0 10px 0;
+  width: 150px;
+}
+/* line 91, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_left_labels textarea {
+  margin-bottom: 10px;
+  width: 240px !important;
+}
+/* line 96, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_left_labels .l_right_inputs {
+  width: 240px;
+}
+
+/* line 102, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_pad {
+  padding: 16px 0 16px 0;
+}
+
+/* line 105, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_pad_top {
+  padding: 16px 0 4px 0;
+}
+
+/* line 108, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_pad_btm {
+  padding: 4px 0 16px 0;
+}
+
+/* line 113, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_input_float {
+  width: 280px;
+}
+
+/* line 117, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_select {
+  width: 240px;
+}
+
+/* line 121, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_rounded_border, .l_rounded_border_column {
+  border-color: #cdcdcd;
+  border-width: 1px;
+  border-style: solid;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 7px;
+}
+
+/* line 130, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_rounded_border_column {
+  margin-right: 10px;
+  height: 100%;
+}
+
+/* line 136, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_as_table {
+  display: table !important;
+}
+
+/* line 139, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_as_table_cell {
+  display: table-cell !important;
+}
+
+/* line 147, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_main_out {
+  padding: 0 0px 30px 0px;
+  text-align: center;
+}
+
+/* line 151, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_main {
+  box-shadow: 0px 4px 35px 0px rgba(50, 50, 50, 0.5);
+  margin: 0 auto;
+  text-align: left;
+  width: 1045px;
+}
+
+/* line 157, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_content {
+  padding: 15px 20px;
+  min-height: 300px;
+  background: white;
+}
+
+/* line 163, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_form {
+  padding: 15px 0 0 0;
+}
+
+/* line 167, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.dijitSplitter {
+  z-index: 1;
+}
+
+/* line 171, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_full_screen {
+  position: fixed;
+  top: 122px;
+  left: 0px;
+  border: 10px solid rgba(50, 50, 50, 0.7);
+  border-radius: 7px;
+  background: #FFF;
+  padding: 10px 15px;
+  margin: 10px;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 400;
+}
+
+/* line 186, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_pop_up {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(50, 50, 50, 0.7);
+  border-radius: 7px;
+  background: #FFF;
+  padding: 10px 15px;
+  display: none;
+  width: 220px;
+  height: 140px;
+  z-index: 405;
+}
+/* line 198, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_pop_up .l_pop_up_content {
+  position: relative;
+}
+/* line 201, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_pop_up .l_pop_up_content .l_pop_up_btn {
+  border: none;
+  background: none;
+  text-indent: -9999px;
+  padding: 0px;
+  margin: 0px;
+  background: url(/common/images/close.png) no-repeat white;
+  width: 26px;
+  height: 26px;
+  right: -28px;
+  top: -18px;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+}
+
+/* line 222, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.heading_section {
+  padding: 20px 0 2px 0;
+}
+/* line 224, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.heading_section h2 {
+  padding: 0;
+  margin: 0;
+}
+/* line 228, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.heading_section button, .heading_section .dijitButton {
+  margin-top: 4px;
+}
+
+/* line 233, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+#loadingOverlay {
+  width: 25px;
+  height: 20px;
+  background: white url("//ajax.googleapis.com/ajax/libs/dojo/1.9.2/dijit/themes/claro/images/loadingAnimation.gif") no-repeat 0px 0px;
+}
+
+/* line 241, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_top {
+  background: #639fff;
+}
+
+/* line 244, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_header {
+  background: #639fff;
+}
+
+/* line 248, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_head_title {
+  width: 60%;
+  height: 75px;
+}
+/* line 253, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_head_title .l_head_title_in {
+  padding-left: 15px;
+}
+/* line 255, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_head_title .l_head_title_in .l_logo {
+  width: 75px;
+  height: 70px;
+  padding: 0px 0 0 0;
+  background: url(/common/images/life.png) no-repeat 0px 5px;
+}
+/* line 262, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_head_title .l_head_title_in .l_logo_text {
+  padding: 3px 0 0 0;
+}
+/* line 265, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_head_title .l_head_title_in .l_logo_text .l_head_tag {
+  border-bottom: 1px solid white;
+}
+
+/* line 273, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_footer {
+  background: #002663;
+}
+/* line 276, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_footer .l_footer_left {
+  width: 65%;
+}
+/* line 279, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_footer .l_footer_left img {
+  padding: 15px;
+}
+/* line 281, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_footer .l_footer_right {
+  width: 34%;
+  padding-left: 1%;
+}
+
+/* line 289, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_head_tabs_out {
+  width: 40%;
+  height: 75px;
+  position: relative;
+}
+/* line 295, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_head_tabs_out .l_head_tabs {
+  position: absolute;
+  right: 35px;
+  bottom: 0;
+}
+/* line 302, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_head_tabs_out .l_head_tabs .l_head_tab a {
+  display: block;
+  cursor: pointer;
+  padding: 4px 8px 2px 9px;
+  margin: 0px 0px 0 4px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e5e5e5), color-stop(50%, #ffffff), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(#e5e5e5, #ffffff, #ffffff);
+  background-image: -moz-linear-gradient(#e5e5e5, #ffffff, #ffffff);
+  background-image: -o-linear-gradient(#e5e5e5, #ffffff, #ffffff);
+  background-image: linear-gradient(#e5e5e5, #ffffff, #ffffff);
+  border: 1px solid #e5e5e5;
+  border-bottom: 1px solid #639fff;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+/* line 314, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_head_tabs_out .l_head_tabs .l_head_tab a:hover {
+  text-decoration: none;
+}
+/* line 317, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_layout.scss */
+.l_head_tabs_out .l_head_tabs .l_head_tab a:active, .l_head_tabs_out .l_head_tabs .l_head_tab a.active {
+  background: white;
+  border-bottom: 1px solid white;
+  text-decoration: none;
+}
+
+/* line 12, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_content.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "rokkittbold";
+  font-weight: bold;
+  margin: 7px 0;
+}
+
+/* line 18, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_content.scss */
+h1, .c-h1 {
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+}
+
+/* line 22, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_content.scss */
+h2, .c-h2 {
+  font-size: 2.125rem;
+  line-height: 2.25rem;
+}
+
+/* line 26, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_content.scss */
+h3, .c-h3 {
+  font-size: 1.875rem;
+  line-height: 2rem;
+}
+
+/* line 30, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_content.scss */
+h4, .c-h4 {
+  font-size: 1.5rem;
+  line-height: 1.625rem;
+}
+
+/* line 34, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_content.scss */
+h5, .c-h5 {
+  font-size: 1.25rem;
+  line-height: 1.375rem;
+}
+
+/* line 38, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_content.scss */
+h6, .c-h6 {
+  font-size: 1rem;
+  line-height: 1.125rem;
+}
+
+/* line 47, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_content.scss */
+.c-center {
+  text-align: center;
+}
+
+/* line 51, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_content.scss */
+.c-condense {
+  font-size: 85%;
+}
+
+/* line 55, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_content.scss */
+.c-lead {
+  font-size: 125%;
+}
+
+/* line 59, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_content.scss */
+.c-shout {
+  text-transform: uppercase;
+}
+
+/* line 72, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_content.scss */
+.c_head_tag {
+  font-family: "rokkittbold";
+  color: white;
+  font-size: 30px;
+  line-height: 32px;
+}
+
+/* line 78, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_content.scss */
+.c_head_title {
+  font-family: "rokkittbold";
+  color: white;
+  font-size: 38px;
+  line-height: 38px;
+}
+
+/* line 84, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_content.scss */
+.c_head_tab {
+  font-size: 17px;
+  line-height: 20px;
+  color: #002663;
+}
+
+/* line 90, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/core/_content.scss */
+.c_footer_right, .c_footer_right * {
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+}
+
+/* line 2, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.notice_item {
+  position: absolute;
+  left: 50%;
+  top: 125px;
+  width: 460px;
+  border: 2px solid #5381ac;
+  border-top: 0;
+  margin: 10px 0px 10px -50px;
+  padding: 7px 20px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+/* line 17, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.notice_wrapper {
+  height: 0px;
+  overflow: hidden;
+}
+
+/* line 22, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.notice_pop_info, .notice_pop_success, .notice_pop_warning, .notice_pop_error {
+  color: #5381ac;
+}
+/* line 24, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.notice_pop_info .fa, .notice_pop_success .fa, .notice_pop_warning .fa, .notice_pop_error .fa {
+  position: absolute;
+  top: 9px;
+  right: 5px;
+  cursor: pointer;
+  color: #616265;
+}
+
+/* line 33, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.notice_pop_info {
+  background-color: #dde6ee;
+  border-color: #5381ac;
+  color: #5381ac;
+}
+
+/* line 40, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.notice_pop_success {
+  background-color: #d0e3ba;
+  border-color: #6c953c;
+  color: #6c953c;
+}
+
+/* line 46, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.notice_pop_warning {
+  background-color: #f8e3d0;
+  border-color: #d97a23;
+  color: #d97a23;
+}
+
+/* line 52, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.notice_pop_error {
+  background-color: #f4c9ca;
+  border-color: #c9282d;
+  color: #c9282d;
+}
+
+/* line 60, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.notice_error {
+  color: #c9282d;
+  font-weight: bold;
+}
+
+/* line 66, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.notices_loading_out {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3000;
+}
+
+/* line 76, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.notices_loading_in {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.95) url(/common/images/loading.gif) no-repeat 55px 25px;
+  color: #5381ac;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #5381ac;
+  border-radius: 3px;
+  padding: 50px 30px 30px 30px;
+  margin-left: -60px;
+  z-index: 3010;
+}
+
+/* line 96, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.dialog_info .dijitDialogTitle, .dialog_success .dijitDialogTitle, .dialog_warning .dijitDialogTitle, .dialog_error .dijitDialogTitle {
+  font-weight: Bold;
+}
+/* line 99, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.dialog_info .dijitDialogPaneActionBar, .dialog_success .dijitDialogPaneActionBar, .dialog_warning .dijitDialogPaneActionBar, .dialog_error .dijitDialogPaneActionBar {
+  padding: 0 5px 5px 5px;
+}
+
+/* line 106, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.dialog_info .fa {
+  color: #6c953c;
+}
+
+/* line 113, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.dialog_success .fa {
+  color: #6c953c;
+}
+
+/* line 119, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.dialog_warning .fa {
+  color: #d97a23;
+}
+
+/* line 125, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.dialog_error .fa {
+  color: #c9282d;
+}
+
+/* line 132, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.dijitDialogPaneActionBar {
+  text-align: center;
+  padding-bottom: 7px;
+}
+
+/* line 138, ../../../Shared_Web_UI_Component/ILSharedUIWeb/WebContent/sass/modules/_notices.scss */
+.dialog_hide_cancel .dijitDialogPaneActionBar span:nth-child(2) {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 2, ../sass/core/_frms.scss */
+.l_left_nav {
+  min-width: 150px;
+}
+
+/* line 6, ../sass/core/_frms.scss */
+.l_main_area {
+  min-width: 1060px;
+}
+
+/* line 12, ../sass/core/_frms.scss */
+.l_left_nav ul {
+  padding: 0 0 0 0;
+}
+/* line 14, ../sass/core/_frms.scss */
+.l_left_nav ul li {
+  list-style: none;
+  padding: 5px 0 5px 5px;
+}
+/* line 17, ../sass/core/_frms.scss */
+.l_left_nav ul li button {
+  text-decoration: none;
+  text-align: left;
+}
+/* line 20, ../sass/core/_frms.scss */
+.l_left_nav ul li button i {
+  margin: 0 7px 0 0px;
+  color: #444;
+  font-size: 14px;
+}
+/* line 25, ../sass/core/_frms.scss */
+.l_left_nav ul li button b {
+  font-weight: normal;
+  width: 123px;
+}
+
+/* line 35, ../sass/core/_frms.scss */
+.l_left_pane {
+  background: #cccccc url(../images/bkg.jpg) repeat-x -200px 0px !important;
+  width: 170px;
+  min-width: 150px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 45, ../sass/core/_frms.scss */
+.dojoxCheckedMultiSelectMenu {
+  max-height: 400px;
+}
+
+/* line 51, ../sass/core/_frms.scss */
+.l_comment_box {
+  width: 265px;
+  height: 110px !important;
+}
+
+/* line 1, ../sass/modules/_forms.scss */
+.plupload_header_content {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* line 6, ../sass/modules/_forms.scss */
+#puploader_dropbox {
+  top: 30px !important;
+}
+
+/* line 10, ../sass/modules/_forms.scss */
+.plupload_message {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* line 1, ../sass/modules/_packages.scss */
+#package_tabs {
+  width: 100%;
+  height: 100%;
+}

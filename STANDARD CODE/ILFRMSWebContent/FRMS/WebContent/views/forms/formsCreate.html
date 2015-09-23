@@ -1,0 +1,355 @@
+<div id="create_view_update_form">
+
+<!--<h3>View/Modify Form</h3> -->
+	<div id="displayName_createOrViewMdfyForm"> </div>
+    <div id = "formDetails" class="l_main_area">
+        <!-- <div id="displayErrorMsg_createOrViewMdfyForm"> </div>
+		<div id="displayInfoMsg_createOrViewMdfyForm"> </div>
+		<div id="displayWarnMsg_createOrViewMdfyForm"> </div> -->
+        <form id="form_createOrViewMdfyForm" name="form_createOrViewMdfyForm" data-dojo-type="dijit/form/Form" enctype="multipart/form-data" action="" method="">
+
+            <!--Form Components -->
+            <div id= "formTitlePane_createOrViewMdfyForm" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Form'">
+
+               <div class="l_row_pad">
+
+                    <div class="l_column_thirds">
+                        <span id="formnumLblSpan_createOrViewMdfyForm" class="promotionIndClass"><label for="formnum_createOrViewMdfyForm">*Form Number</label> </span>
+                        <textarea id="formnum_createOrViewMdfyForm" name="formnum_createOrViewMdfyForm" data-dojo-type="dijit/form/SimpleTextarea" rows="2" cols="34"
+                            data-dojo-props="trim:true, propercase:true, maxLength:100">
+                        </textarea> 
+                        <br>
+                        
+                        <span id="formDescLblSpan_createOrViewMdfyForm" class="promotionIndClass"><label for="revDate_createOrViewMdfyForm"> Revision Date</label></span>
+                        <input id="revDate_createOrViewMdfyForm" type="text" name="revDate_createOrViewMdfyForm" data-dojo-type="dijit/form/ValidationTextBox"  
+                            data-dojo-props="trim:true, propercase:true, maxLength:5, value:' ', regExp:'((0[1-9])|(1[0-2]))\/(\\d{2})', 
+								invalidMessage:'Please enter valid revision date in mm/yy format.'" class = "notFocusClass"/> 
+                        <br>
+                        
+                        <span id="formDescLblSpan_createOrViewMdfyForm" class="promotionIndClass"><label for="formDesc_createOrViewMdfyForm"> Form Description</label></span>
+                        <textarea id="formDesc_createOrViewMdfyForm" name="formDesc_createOrViewMdfyForm" data-dojo-type="dijit/form/SimpleTextarea" rows="5" cols="34"
+                            data-dojo-props="required:true, trim:true, propercase:true, maxLength:30, value:' '">
+                        </textarea>
+                        <br>
+                    </div>
+                    
+                    <div class="l_column_thirds">
+                        
+						<span id="clasftnLblSpan_createOrViewMdfyForm" class="promotionIndClass"><label for="clasftn_createOrViewMdfyForm"> * Classification</label></span>
+                        <select id="clasftn_createOrViewMdfyForm" name="clasftn_createOrViewMdfyForm" data-dojo-type="dijit/form/FilteringSelect" 
+                            style="width: 200px;" data-dojo-props = "value:' '" class = "notFocusClass"> </select>
+                        <br>
+                        
+                        <span id="subClasftnLblSpan_createOrViewMdfyForm" class="promotionIndClass"><label for="subClasftn_createOrViewMdfyForm"> * Sub-Classification</label></span>
+                        <select id="subClasftn_createOrViewMdfyForm" name="subClasftn_createOrViewMdfyForm" data-dojo-type="dijit/form/FilteringSelect"  
+                            style="width: 200px;" data-dojo-props = "value:' '" class = "notFocusClass" ></select>
+                        <br>
+                        
+                        <span id="formTypeLblSpan_createOrViewMdfyForm" class="promotionIndClass"><label for="formType_createOrViewMdfyForm"> * Document Form Type</label></span>
+                        <select id="formType_createOrViewMdfyForm" name="formType_createOrViewMdfyForm" data-dojo-type="dijit/form/FilteringSelect" 
+                             style="width: 200px;" data-dojo-props = "value:' '" class = "notFocusClass"> </select>
+						<br>
+						<br>
+						<label for="ric_createOrViewMdfyForm" id = "riclbl_createOrViewMdfyForm"> RIC <br>
+						<input id="ric_createOrViewMdfyForm" type="text" name="ric_createOrViewMdfyForm" data-dojo-type="dijit/form/TextBox" style="width:200px;" readonly
+							class = "disableRic"/> 
+						</label>
+                        
+                        
+                    </div>
+
+                    <div class="l_column_thirds">
+
+                        <span id="formTitleSpan_createOrViewMdfyForm" class="promotionIndClass"><label for="formTitle_createOrViewMdfyForm"> Form Title</label></span>
+                        <textarea id="formTitle_createOrViewMdfyForm" name="formTitle_createOrViewMdfyForm" data-dojo-type="dijit/form/SimpleTextarea" rows="5" cols="35"
+                            data-dojo-props="required:true, trim:true, propercase:true, maxLength:100, value:' '">
+                        </textarea>
+                        <label for="formUsageIns_createOrViewMdfyForm">Form Usage Instructions</label>
+                        <textarea id="formUsageIns_createOrViewMdfyForm" name="formUsageIns_createOrViewMdfyForm" data-dojo-type="dijit/form/SimpleTextarea" rows="5" cols="35"
+                            data-dojo-props="trim:true, propercase:true, maxLength:100">
+                        </textarea> 
+
+                    </div>
+
+                </div>
+            </div>
+
+            <br>
+            <!--Rules  -->
+            <div id= "rulesTitlePane_createOrViewMdfyForm" data-dojo-type="dijit/TitlePane" 
+                 data-dojo-props="title: 'Rules'">
+
+                <div class="l_row">
+
+                    <div class="l_column_thirds">
+                        <span id="statesSpan_createOrViewMdfyForm" class="promotionIndClass"><label for="states_createOrViewMdfyForm"> States</label></span>
+                        <textarea id="states_createOrViewMdfyForm" name="states_createOrViewMdfyForm" data-dojo-type="dijit/form/SimpleTextarea" rows="5" cols="35" 
+                            style="width:auto;" data-dojo-props="readOnly:true">
+                        </textarea> <br>
+                        <button id="editStsBtn_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button">Edit States</button>
+                    </div>
+
+                    <div class="l_column_thirds">
+
+                        <span id="tmgreqSpan_createOrViewMdfyForm" class="promotionIndClass"><label for="tmgreq_createOrViewMdfyForm"> Timing Requirement</label></span>
+                        <select id="tmgreq_createOrViewMdfyForm" name="tmgreq_createOrViewMdfyForm" style="width: 150px;" data-dojo-type="dijit/form/FilteringSelect" 
+                            data-dojo-props="required:false, value:''" class = "notFocusClass">                
+                        </select>
+
+                        <span id="tmgCdSpan_createOrViewMdfyForm" class="promotionIndClass"><label for="tmgCd_createOrViewMdfyForm"> Timing Code</label></span>
+                        <select id="tmgCd_createOrViewMdfyForm" name= "tmgCd_createOrViewMdfyForm" data-dojo-type="dojox/form/CheckedMultiSelect" 
+                            data-dojo-props="dropDown: true, multiple: true">
+                        </select>
+                        
+                        <span id="distChnlSpan_createOrViewMdfyForm" class="promotionIndClass"><label for="distChnl_createOrViewMdfyForm"> Channel(s)</label> </span>
+                        <select id="distChnl_createOrViewMdfyForm" name="distChnl_createOrViewMdfyForm" data-dojo-type="dojox/form/CheckedMultiSelect"
+                           data-dojo-props="dropDown: true, multiple: true">
+                        </select>
+
+                        <span id="returntoHOLblSpan_createOrViewMdfyForm" class="promotionIndClass"><label for="returntoHO_createOrViewMdfyForm"> Return to Home Office</label></span>
+                        <input type="radio" id="rtrnHOIndYes_createOrViewMdfyForm" data-dojo-type="dijit/form/RadioButton" name="returntoHO_createOrViewMdfyForm" value="1">Yes
+                        <input type="radio" id="rtrnHOIndNo_createOrViewMdfyForm" data-dojo-type="dijit/form/RadioButton" name="returntoHO_createOrViewMdfyForm"  value="0"/>No
+                        
+
+                    </div>
+
+
+                    <div class="l_column_thirds">
+
+                        <span id="stTypeSpan_createOrViewMdfyForm" class ="promotionIndClass"><label for = "stType_createOrViewMdfyForm">State Type</label></span>
+                        <select id="stType_createOrViewMdfyForm" name="stType_createOrViewMdfyForm" style="width: 150px;" 
+                            data-dojo-type="dijit/form/FilteringSelect" class = "notFocusClass"></select>
+                        <span id="resdncTypeSpan_createOrViewMdfyForm" class ="promotionIndClass"><label for="resdncType_createOrViewMdfyForm">Residence Type</label></span>
+                        <select id="resdncType_createOrViewMdfyForm" style="width: 150px;" data-dojo-type="dijit/form/FilteringSelect"
+                            data-dojo-props="required:false"></select>
+                        <br>
+                        <br>
+						<div id="productBtnDiv">
+                        <button id="edit_product_btn_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button"
+                            class="promotionIndClass">Products</button>
+						</div>
+                        <span id="tranIndLblSpan_createOrViewMdfyForm" class="promotionIndClass"><label for="tranInd_createOrViewMdfyForm"> Transitional</label></span>
+                        <input type="radio" id="transIndYes_createOrViewMdfyForm" data-dojo-type="dijit/form/RadioButton" name="tranInd_createOrViewMdfyForm" value="1">Yes
+                        <input type="radio" id="transIndNo_createOrViewMdfyForm" data-dojo-type="dijit/form/RadioButton" name="tranInd_createOrViewMdfyForm"  value="0"/>No
+                    
+                    </div>
+
+
+                </div>
+
+            </div>
+            <br>
+            <!--Form Dates-->
+            <div id= "datesTitlePane_createOrViewMdfyForm" data-dojo-type="dijit/TitlePane" 
+                 data-dojo-props="title: 'Form Dates'">
+
+                <div class="l_row">
+                    <div class="l_column_thirds">
+                        <label for="formUseDate_createOrViewMdfyForm">Form Use Date</label>
+                        <input type="text" id="formUseDate_createOrViewMdfyForm" data-dojo-type="dijit/form/DateTextBox"/>
+
+                        <label for="stApprDate_createOrViewMdfyForm">State Approval Date</label>
+                        <input type="text" id="stApprDate_createOrViewMdfyForm" data-dojo-type="dijit/form/DateTextBox" 
+							data-dojo-props="value:' '"/>
+                    </div>
+                    <div class="l_column_thirds">
+                       
+                        <span id="stEffDateSpan_createOrViewMdfyForm" class="promotionIndClass">
+                            <label for="stEffDate_createOrViewMdfyForm">State Effective Date</label>
+                        </span>
+                        <input type="text" id="stEffDate_createOrViewMdfyForm" data-dojo-type="dijit/form/DateTextBox" class = "notFocusClass"/>
+                        
+                        <label for="stExpDate_createOrViewMdfyForm">State Expiration Date</label>
+                        <input type="text" id="stExpDate_createOrViewMdfyForm" data-dojo-type="dijit/form/DateTextBox"/>
+                        
+                    </div>
+                    <div class="l_column_thirds">
+                    </div>
+
+                </div>
+
+            </div>
+            <br>
+            <!--Form Information -->
+            <div id= "otherFldsTitlePane_createOrViewMdfyForm" data-dojo-type="dijit/TitlePane" 
+                data-dojo-props="title: 'Form Information'">
+
+                <div class="l_row">
+                    <div class="l_column_thirds">
+                        <span id="nppiPciDesnSpan_createOrViewMdfyForm" class="promotionIndClass"><label for="nppiPciDesn_createOrViewMdfyForm"> NPPI/PCI Designation</label></span>
+                        <select id="nppiPciDesn_createOrViewMdfyForm" name="nppiPciDesn_createOrViewMdfyForm" 
+                            data-dojo-type="dojox/form/CheckedMultiSelect" data-dojo-props="dropDown: true, multiple: true">
+                        </select>
+                        
+                        <span id="docContentSpan_createOrViewMdfyForm" class="promotionIndClass">
+                            <label for="docContent_createOrViewMdfyForm"> Doc Form Content Type</label>
+                        </span>
+                        <select  id="docContent_createOrViewMdfyForm" name="docContent_createOrViewMdfyForm" style="width: 150px;"
+                            data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false"  class = "notFocusClass"></select> 
+                        
+                        <span id="noOfPagesSpan_createOrViewMdfyForm" class="promotionIndClass"><label for="noOfPages_createOrViewMdfyForm"> No of Pages</label></span>
+                        <input type="text"  name ="noOfPages_createOrViewMdfyForm" data-dojo-type="dijit/form/ValidationTextBox"
+                            id="noOfPages_createOrViewMdfyForm" data-dojo-props="maxLength:4, regExp:'(([0-9])*)', invalidMessage:'Please Enter Only Digits.'"  
+								class = "notFocusClass" /> <br>
+                    </div>
+                    <div class="l_column_thirds">
+                    
+                        <span id="logoIndLbl_createOrViewMdfyForm" class="promotionIndClass"><label for="logoInd_createOrViewMdfyForm"> Logo</label></span>
+                        <input type="radio" id="logoInd_Y_createOrViewMdfyForm"  data-dojo-type="dijit/form/RadioButton" name="logoInd_createOrViewMdfyForm" value="1">Yes
+                        <input type="radio" id="logoInd_N_createOrViewMdfyForm" data-dojo-type="dijit/form/RadioButton" name="logoInd_createOrViewMdfyForm"  value="0"/>No
+                        
+                        
+                        <span id="offSignLbl_createOrViewMdfyForm" class="promotionIndClass"><label for="offSignInd_createOrViewMdfyForm"> Officer Signature</label></span>
+                        <input type="radio" id="offSignInd_Y_createOrViewMdfyForm" data-dojo-type="dijit/form/RadioButton" name="offSignInd_createOrViewMdfyForm" value="1">Yes
+                        <input type="radio" id="offSignInd_N_createOrViewMdfyForm" data-dojo-type="dijit/form/RadioButton" name="offSignInd_createOrViewMdfyForm" value="0">No
+                        
+                    </div>
+                    <div class="l_column_thirds">
+                    
+                        <label for="lunarDocType_createOrViewMdfyForm">Lunar Document Type</label>
+                        <input type="text" name="lunarDocType_createOrViewMdfyForm" data-dojo-type="dijit/form/TextBox"
+                                data-dojo-props="trim:true, propercase:true" id="lunarDocType_createOrViewMdfyForm" /> <br>
+                        
+                        <span id="busFunSpan_createOrViewMdfyForm" class="promotionIndClass"><label for="busFun_createOrViewMdfyForm"> Business Function</label></span>
+                        <select id="busFun_createOrViewMdfyForm" 
+                            style="width: 150px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="required:false, value:' '"></select> 
+                        <br>
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <!--System Dates -->
+            <div id= "sysDatesTitlePane_createOrViewMdfyForm" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'System Dates'">   
+                <div class="l_row">
+                    <div class="l_column_thirds">
+                    
+                        <span id="lifeEffDateSpan_createOrViewMdfyForm" class="promotionIndClass">
+                            <label for="lifeEffDate_createOrViewMdfyForm">Life Effective Date</label>
+                        </span>
+                        <input type="text" id="lifeEffDate_createOrViewMdfyForm" data-dojo-type="dijit/form/DateTextBox"  class = "notFocusClass"/>
+                        <label for="lifeExpDate_createOrViewMdfyForm">Life Expiration Date</label>
+                        <input type="text" id="lifeExpDate_createOrViewMdfyForm" data-dojo-type="dijit/form/DateTextBox"/>
+                                           
+                    </div>
+                    <div class="l_column_thirds">
+                        <label for="docMakerImplDate_createOrViewMdfyForm">Documaker Impl. Date</label>
+                        <input type="text" id="docMakerImplDate_createOrViewMdfyForm" data-dojo-type="dijit/form/DateTextBox"/>
+                        
+                        <label for="promImplDate_createOrViewMdfyForm">Promotion Impl. Date</label>
+                        <input type="text" id="promImplDate_createOrViewMdfyForm" data-dojo-type="dijit/form/DateTextBox" readonly/>
+                    </div>
+                    <div class="l_column_thirds">
+                    </div>
+                </div>
+            </div>    
+       
+            <div>
+            
+                <button id="btnClone_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button">Clone</button>
+                <button id="btnExtractSt_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button" style="display:none;">Extract State</button>
+                <button id="btnTemplates_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button">Templates</button>
+                <button id="btnFormModData_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button">Form Module Data</button>
+                <button id="btnComments_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button">Comments</button>
+
+            </div> 
+                
+            <div>
+                <button id="btnHistory_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button">History</button>
+                <button id="btnAssToPkg_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button">Associate to Package</button>
+                <!-- <button id="btnPromotion_viewORModifyForm" type="button" data-dojo-type="dijit/form/Button">Promotion Validation</button> -->
+                <button id="btnPromotion_createOrViewMdfyForm" data-dojo-type="dijit/form/ToggleButton" data-dojo-props="iconClass:'dijitCheckBoxIcon'"> Promotion Validation </button>
+                <button id="btnSave_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button">Save</button>
+                <button id="btnCancel_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+            </div>
+            
+            <!--These below code is used for dialog boxes -->
+            <!-- State dialog box-->
+            <div data-dojo-type="dijit.Dialog" style="display:none;" id="stateDialogId_createOrViewMdfyForm" name="stateDialog" data-dojo-props="title:'Edit States'">
+					<div>
+						<label for="formNum_formComments">Form Number :   
+							<input type="text" id="formNum_stateAddOrRemoveDialog" data-dojo-type="dijit/form/TextBox" style = "margin-left:5px" disabled/>
+						</label> 
+						
+						<label for="revDate_formComments">Revision Date :    
+							<input type="text" id="revDate_stateAddOrRemoveDialog" data-dojo-type="dijit/form/TextBox" style = "margin-left:3px" disabled/>
+						</label>
+						
+						<label for="formDesc_formComments">Form Description :  
+							<input type="text" id="formDesc_stateAddOrRemoveDialog" data-dojo-type="dijit/form/TextBox" disabled/>
+						</label>
+					</div>
+                    <div class="l_row">
+                        <div class ="l_column_thirds">
+                            <label for="exStsCMSelect_createOrViewMdfyForm">Excluded</label><br>
+                            <select id="exStsCMSelect_createOrViewMdfyForm" name="exStsCMSelect_createOrViewMdfyForm" data-dojo-type="dojox/form/CheckedMultiSelect"
+                                data-dojo-props="multiple: true, required: false, value: ''"  size="8" style="width:300px;"></select>
+                        </div>
+                        <div class ="l_column_thirds">
+                            <div style="margin-left: 30px; margin-top: 200px;">
+                                <span>
+                                    <button class="includeExcludeBtnCss" id="btnIn_editSt_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button">Include > </button>
+                                    <button class="includeExcludeBtnCss" id="btnEx_editSt_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button"> < Exclude </button>
+                                </span>
+                                <br>
+                                <span>
+                                    <button class="includeExcludeBtnCss" id="btnInAll_editSt_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button">Include All >> </button>
+                                    <button class="includeExcludeBtnCss" id="btnExAll_editSt_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button"> << Exclude All </button>
+                                </span>
+                            </div>
+                            
+                        </div>
+                        <div class ="l_column_thirds">
+                                
+                            <label for="inStCMSelect_createOrViewMdfyForm">Included</label><br>
+                            <select id="inStCMSelect_createOrViewMdfyForm" name="inStCMSelect_createOrViewMdfyForm" data-dojo-type="dojox/form/CheckedMultiSelect"
+                                data-dojo-props="multiple: true, required: false, value: ''"  size="8" style="width:300px;"></select>
+                            
+                        </div>
+                    </div>
+					<br>
+					<button id="acceptStates_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button">Save</button>
+					<!-- <button id="resetRemovedStsBtn_createOrViewMdfyForm" type="button" data-dojo-type="dijit/form/Button">Reset</button> -->
+            </div>
+            
+             <div data-dojo-type="dijit.Dialog" style="width:auto;height:auto;display:none;" id="extractStateDialog_ViewMdfyForm" name="stateDialog" data-dojo-props="title:'Extract States'">
+					<div>
+						<label for="formNum_label">Form Number :   
+							<input type="text" id="formNum_extractStateRemoveDialog" data-dojo-type="dijit/form/TextBox" style = "margin-left:5px" 
+								data-dojo-props="disabled:true"/>
+						</label> 
+						
+						<label for="revDate_label">Revision Date :    
+							<input type="text" id="revDate_extractStateRemoveDialog" data-dojo-type="dijit/form/TextBox" style = "margin-left:3px" 
+								data-dojo-props="disabled:true"/>
+						</label>
+						
+						<label for="formDesc_label">Form Description :  
+							<input type="text" id="formDesc_extractStateRemoveDialog" data-dojo-type="dijit/form/TextBox" 
+								data-dojo-props="disabled:true"/>
+						</label>
+					</div>
+                    <div class="l_row">
+                        <div class ="l_column_thirds">
+                                
+                            <label for="inStCMSelect_ViewMdfyForm">Avaliable States</label><br>
+                            <select id="inStCMSelect_ViewMdfyForm" name="inStCMSelect_ViewMdfyForm" data-dojo-type="dojox/form/CheckedMultiSelect"
+                                data-dojo-props="multiple: true, required: false, value: '' "  size="8" style="width:300px;"></select>
+                            
+                        </div>
+                    </div>
+                    <button id="removeStates_ViewMdfyForm" type="button" data-dojo-type="dijit/form/Button">Remove</button>
+                    <br>
+                    <div id="dateSetGridForRemovedItems_ViewMdfyForm" style='display:none'></div>
+					<div id="buttonPanel" style='display:none'>
+						 <button id="saveStates_ViewMdfyForm" type="button" data-dojo-type="dijit/form/Button">Save</button>
+						 <button id="cancelStates_ViewMdfyForm" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+					</div>
+            </div>
+			
+        </form>
+
+    </div>
+	
+</div>
+

@@ -1,0 +1,34 @@
+<div class="l_main_area">
+    
+    <h3>Add to Package</h3>
+    <div class="l_row_pad">
+        <div id="packageFormSearch_packageAddForm"></div>
+    </div>
+    <div class="l_row_pad">
+        <div id="packageFormGrid_packageAddForm"></div>
+    </div>
+
+    <form data-dojo-type="dijit/form/Form" id="form_packageAddForm">
+        <div class="l_row_pad">
+            <div class="l_column_thirds">
+                <label for="selDateException_packageAddForm">Query Date Exception</label>
+                <select id="selDateException_packageAddForm" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props= "value:' ', required:false, placeHolder:'Loading..'"></select>
+            </div><!--l_column_thirds-->
+            <div class="l_column_thirds">
+                <label for="dateEffective_packageAddForm">* Association Effective</label>
+                <input id="dateEffective_packageAddForm" data-dojo-id="dateEffective_packageAddForm" data-dojo-type="dijit/form/DateTextBox" onChange="dateExpiration_packageAddForm.constraints.min = arguments[0];" />
+            </div><!--l_column_thirds-->
+            <div class="l_column_thirds">
+                <label for="dateExpiration_packageAddForm">Association Expiration</label>
+                <input id="dateExpiration_packageAddForm" data-dojo-id="dateExpiration_packageAddForm" data-dojo-type="dijit/form/DateTextBox" onChange="dateEffective_packageAddForm.constraints.max = arguments[0];" />
+            </div><!--l_column_thirds-->
+        </div><!--l_row_pad-->
+
+        <div class="l_row_pad">
+            <button id="btnUpdate_packageAddForm" type="button" data-dojo-type="dijit/form/Button">Update</button>
+            <button id="btnCancel_packageAddForm" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+            <button id="btnFullScreen_packageAddForm" type="button" data-dojo-type="dijit/form/Button">Full Screen</button>
+        </div>
+        
+    </form>
+</div>

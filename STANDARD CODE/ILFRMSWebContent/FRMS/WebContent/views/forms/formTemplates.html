@@ -1,0 +1,42 @@
+<div>
+    <h3> Templates </h3>
+	<div id="displayErrorMsg_formTemplates"> </div>
+	<div id="displayInfoMsg_formTemplates"> </div>
+	<div class="l_main_area">
+		<div class="l_row">
+			<div class="l_column_thirds">
+			
+				<label for="formNum_formTemplates">Form # :</label> 
+					<input type="text" id="formNum_formTemplates" data-dojo-type="dijit/form/TextBox" />
+				
+				<label for="revDate_formTemplates">Revision Date :</label>
+					<input type="text" id="revDate_formTemplates" data-dojo-type="dijit/form/TextBox" />
+				
+				<label for="formDesc_formTemplates">Form Description :</label>
+					<input type="text" id="formDesc_formTemplates" data-dojo-type="dijit/form/TextBox" />
+				
+			</div>
+			<div class="l_column_thirds">
+			</div>
+			<div class="l_column_thirds">
+			</div>
+			<br>
+			<label for="formTemplateGridMsg_formTemplates" style = "font-weight:bold">Associated Templates :</label> 
+			<div id="formTemplateGridMsg_formTemplates"></div>
+			<div id="associatedFormTemplateGrid_formTemplates" data-dojo-type = "dojox/grid/EnhancedGrid"></div>
+			<br>
+			<button id="uploadBtn_formTemplates" type="button" data-dojo-type="dijit/form/Button">Upload</button>
+			<button id="doneBtn_formTemplates" type="button" data-dojo-type="dijit/form/Button">Done</button>
+			
+			<br>
+			<label for="deletedFormTemplateGrid_formTemplates" style = "font-weight:bold" >Deleted :</label> 
+			<div id="deletedFormTemplateGrid_formTemplates"></div>
+			<div id="deletedFormTemplateGrid_formTemplates" data-dojo-type="dojox/grid/EnhancedGrid"></div>
+			<br>
+			
+			
+		</div>
+	</div>
+	
+	
+</div>

@@ -1,0 +1,80 @@
+<div>
+    <h3>Edit User</h3>
+    <div class="container column">
+        <form id="editUserForm_editUser" data-dojo-type="dijit/form/Form">
+         <div class="l_row_pad">
+            <label for="Nid">* N#</label>
+            <input type="text" id="nid_editUser" name="userIdentifier" data-dojo-type="dijit/form/ValidationTextBox"
+            data-dojo-props="maxlength:8,required:true" />
+            <label for="LastName">* Last Name</label>
+            <input type="text" id="lastName_editUser" name="userLastName" data-dojo-type="dijit/form/ValidationTextBox"
+            data-dojo-props="required:true" />
+            <label for="FirstName">* First Name</label>
+            <input type="text" name="userFirstName" id="firstName_editUser" data-dojo-type="dijit/form/ValidationTextBox"
+            data-dojo-props="required:true" />
+            </div> 
+            <div class="l_row_pad">
+            <table>
+                <tr>
+                    <td>
+                        <label for="editFrmWrite">
+                            <input type="checkbox" name="formsWriteIndicator" id="editFrmWrite_editUser"  
+                            data-dojo-type="dijit.form.CheckBox" data-dojo-props="checked: true"> <span>Forms 
+							Write&nbsp;&nbsp;</span> </label>
+                    </td>
+                    <td>
+                        <label for="editRecWrite">
+                            <input type="checkbox" name="recordsWriteIndicator" id="editRecWrite_editUser" 
+                            data-dojo-type="dijit.form.CheckBox" data-dojo-props="checked: false"> <span>Records
+							Write&nbsp;&nbsp;</span> </label>
+                    </td>
+                    <td>
+                        <label for="editPackWrite">
+                            <input type="checkbox" name="packagesWriteIndicator" id="editPackWrite_editUser" 
+                            data-dojo-type="dijit.form.CheckBox" data-dojo-props="checked: true"> <span>Package
+							Write&nbsp;&nbsp;</span> </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="editFrmsPrmo">
+                            <input type="checkbox" name="frmsPromoteIndicator" id="editFrmsPrmo_editUser"  
+                            data-dojo-type="dijit.form.CheckBox" data-dojo-props="checked: false"> FRMS Promote&nbsp;&nbsp;</span>
+                        </label>
+                    </td>
+                    <td>
+                        <label for="editUserAdmin">
+                            <input type="checkbox" name="userAdministratorIndicator" id="editUserAdmin_editUser" 
+                            data-dojo-type="dijit.form.CheckBox" data-dojo-props="checked: false"> 
+                            <span>User Administrator</span> </label>
+                    </td>
+                </tr>
+            </table>
+            <input type="hidden" id="editUuserStatus_editUser" name="userStatus" data-dojo-type="dijit/form/TextBox"
+            value="Active" />
+            <input type="hidden" id="editUserDepartment_editUser" name="userDepartment" data-dojo-type="dijit/form/TextBox"
+            value="LifeWorks" />
+            <input type="hidden" id="editEffectiveDateTime_editUser" name="effectiveDateTime" data-dojo-type="dijit/form/TextBox"
+            value="" />
+            <input type="hidden" id="editEndDateTime_editUser" name="endDateTime" data-dojo-type="dijit/form/TextBox"
+            value="" /></div> </form>
+    </div>
+    <div class="l_row_pad">
+        <table>
+            <tr>
+                <td>
+                    <button id="save_editUser" type="button" data-dojo-type="dijit/form/Button">Save</button>
+                </td>
+                <td>
+                    <button id="cancel_editUser" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+                </td>
+                <td>
+                    <button id="archive_editUser" type="button" data-dojo-type="dijit/form/Button">Archive</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

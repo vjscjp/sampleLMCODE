@@ -1,0 +1,63 @@
+/*Common classes */
+.selectWidth
+{
+	width:200px !important;
+}
+
+.tundra .dojoxCheckedMultiSelect .dojoxCheckedMultiSelectWrapper
+{
+	height: 400px;
+	width: 80%;
+}
+
+.excludeCMSelect 
+{
+	width:200px;
+	height:60%;
+	overflow:scroll;
+
+}
+.alignleft
+{
+	float: left;
+}
+.dialogButtons
+{
+	float: left;
+	padding: 12em 4.5em 1em 0.2em
+}
+
+.includeExcludeBtnCss
+{
+	width:115px;
+	height:50px
+}
+.checkedMultiSelectCompWidth
+{
+    width:200px; 
+} 
+
+#widget_subclassfnCd_formSearch
+{
+    width:300px !important;
+    height:400px !important;
+}
+/*Create or view Form*/
+.crtOrViewModifyFormDiv
+{
+    min-height: 100% !important;
+}
+#forms
+{
+    min-width: 80% !important;
+	/*max-height: 500px !important;*/
+	min-height: 100% !important;
+    overflow: scroll !important;
+}
+
+
+
+
+
+
+

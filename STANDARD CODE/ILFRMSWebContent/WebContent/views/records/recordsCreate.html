@@ -1,0 +1,111 @@
+<div class="l_main_area">
+	
+	<div id="displayName_recordCreate"> </div>
+	<div id="displayErrorMsg_recordCreate"> </div>
+	<div id="displayInfoMsg_recordCreate"> </div>
+	<form id="form_recordCreate" data-dojo-type="dijit/form/Form">
+	<!-- <div class="l_row_pad l_as_table"> -->
+	<div class="l_row_pad">
+		<!-- <div class="l_column_thirds l_as_table_cell"> -->
+		<div class="l_column_thirds">
+		    <!-- <div class="l_rounded_border_column"> -->
+		        <label for="ddlRecordSource_recordsCreate">* Record Source</label>
+			    <select id="ddlRecordSource_recordsCreate" data-dojo-type="dijit/form/Select" 
+			       data-dojo-props="value: '',required:true" name="recordSource">
+			       <option value="0">Internal</option>
+			       <option value="1">External</option>
+			    </select>
+		    
+		        <label for="ddlClass_recordsCreate">* Classification</label>
+			    <select id="ddlClass_recordsCreate" data-dojo-type="dijit/form/FilteringSelect"  style="width: 200px;" 
+			    	value: "" name="classtnCd">
+			    </select>
+			    
+		        <label for="ddlSubClass_recordsCreate">* Sub-Classification</label>
+			    <select id="ddlSubClass_recordsCreate" data-dojo-type="dijit/form/FilteringSelect"  style="width: 200px;" 
+			    	value: "" name="subclassificationCd">
+			    </select>
+			    
+			    <label for="txtRecordTitle_recordsCreate">Record Title</label>
+				<input type="text" id="txtRecordTitle_recordsCreate" name="recordTitle" data-dojo-props="maxlength:100" 
+					data-dojo-type="dijit/form/ValidationTextBox"/>
+				
+			    <label for="txtRecordNumber_recordsCreate">* Record #</label>
+				<input type="text" id="txtRecordNumber_recordsCreate" name="recordNumber" data-dojo-props="maxlength:100,required:true" 
+					data-dojo-type="dijit/form/ValidationTextBox"/>
+			
+			    <label for="effectiveDate_recordsCreate">* Effective Date</label>
+			    <input type="text" id="effectiveDate_recordsCreate"  data-dojo-props="required:true" data-dojo-type="dijit/form/DateTextBox"/>
+			    
+			    <label for="expirationDate_recordsCreate">Expiration Date</label>
+			    <input type="text" id="expirationDate_recordsCreate" data-dojo-type="dijit/form/DateTextBox"/>
+	    	<!-- </div> -->
+	    	
+		</div>
+		
+		<!-- <div class="l_column_thirds l_as_table_cell"> -->
+		<div class="l_column_thirds">
+		    <!-- <div class="l_rounded_border_column"> -->
+                
+		        <label for="ddlNPPI_recordsCreate">* NPPI/PCI Designation</label>
+                <div id="ddlNPPIWidget_recordsCreate"></div>
+	
+		        <label for="ddlTimingCode_recordsCreate">Timing Code</label>
+			    <select id="ddlTimingCode_recordsCreate" data-dojo-type="dojox/form/CheckedMultiSelect" 
+								data-dojo-props="dropDown: true, multiple: true, required: false" name="timingCds">
+			    </select>
+			    
+			    <label for="txtLunarDocType_recordsCreate">Lunar Doc Type</label>
+			    <input type="text" id="txtLunarDocType_recordsCreate" name="lunarDocTypeNm" 
+			    	data-dojo-props="maxlength:50" data-dojo-type="dijit/form/ValidationTextBox"/>
+				<br>
+				<label for="RIC_recordsCreate" id = "RIClbl_recordsCreate"> RIC <br>
+					<input id="RIC_recordsCreate" type="text" name="RIC_recordsCreate" data-dojo-type="dijit/form/TextBox" style="width:200px;" 
+						readonly/> 
+				</label>
+				
+			    <label for="txtInitialComment_recordsCreate" id= "txtInitialCommentlbl_recordsCreate">Initial Comment
+			    <!-- <textarea id="txtInitialComment_recordsCreate" data-dojo-type="dijit/form/Textarea"></textarea> -->
+			    <textarea id="txtInitialComment_recordsCreate" name="txtInitialComment_recordsCreate" data-dojo-type="dijit/form/SimpleTextarea" 
+					data-dojo-props="trim:true, propercase:true">
+				</textarea>		
+				</label>
+				
+	    	<!-- </div> -->
+		</div>
+	</div>
+	
+	<!--Duplicate dialog -->
+        <!--Not used anymore !!-->
+	<!--<div data-dojo-type="dijit.Dialog" style="display:none;" id="confirm_recordsCreate" name="confirm_recordsCreate" >
+		<h3>Duplicate Record</h3>
+    <div class="l_rounded_border_column">
+	    <div id="duplicatConfirmation" class="l_row_pad">
+	        <label><b>This is a duplicate entry. Please update
+	        <br> your document record values </b></label>
+	        <label><b>Classification:</b> <label for="classification" id="clas_duplicateRecordConfirmation"></label></label>
+	        <label><b>subClassfication:</b> <label for="subClassfication" id="sClas_duplicateRecordConfirmation"></label></label>
+	       	<label><b>Record #:</b> <label for="recordid" id="recId_duplicateRecordConfirmation"></label></label>
+	        <label><b>Record Title:</b> <label for="recordTitle" id="recTit_duplicateRecordConfirmation"></label></label>
+	   </div>
+	   <div class="l_row_pad">
+	        <table>
+	            <tr>
+	                <td>
+	                    <button id="modify_duplicateRec" data-dojo-type="dijit/form/Button" type="button" >Modify Existing</button>
+	                    <button id="cancel_duplicateRec" data-dojo-type="dijit/form/Button" type="button" >Cancel</button>
+	                </td>
+	            </tr>
+	        </table>
+	    </div>
+    </div>
+	
+	</div>-->
+        </form>	
+        <div class="l_row_pad">
+            <button id="btnSave_recordsCreate" type="button" data-dojo-type="dijit/form/Button">Save</button>
+            <button id="btnCancel_recordsCreate" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+			<button id="historyBtn_recordsCreate" type="button" data-dojo-type="dijit/form/Button">History</button>
+        </div>
+       
+</div>

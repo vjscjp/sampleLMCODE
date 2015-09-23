@@ -1,0 +1,111 @@
+<div class="l_main_area">
+    <h3 id="header_packageModify">Modify Packages</h3>
+    <div class="l_row">
+        
+        <div class="l_column_thirds">
+            <label>Package Name</label>
+            <input type="text" id="txtName_packageModify" disabled="disabled" data-dojo-type="dijit/form/TextBox"/>
+            
+            <label>RIC</label>
+            <input type="text" id="txtRIC_packageModify" disabled="disabled" data-dojo-type="dijit/form/TextBox"/>
+            
+            <label>Package Iteration</label>
+            <div id="selPackageIteration_packageModify"></div>
+        </div><!--l_column_thirds-->
+        
+        <div class="l_column_thirds">
+            <label>Classification</label>
+            <input type="text" id="txtClassification_packageModify" disabled="disabled" data-dojo-type="dijit/form/TextBox"/>
+            
+            <label>Sub-Classification</label>
+            <input type="text" id="txtSubClassification_packageModify" disabled="disabled" data-dojo-type="dijit/form/TextBox"/>
+            
+            <label>Query Date Parameter</label>
+            <input type="text" id="txtDate_packageModify" disabled="disabled" data-dojo-type="dijit/form/TextBox"/>
+        </div><!--l_column_thirds-->
+        
+        <div class="l_column_thirds">
+            <label>Package Effective Date</label>
+            <input type="text" id="txtEffective_packageModify" disabled="disabled" data-dojo-type="dijit/form/TextBox"/>
+            
+            <label>Package Expiration Date</label>
+            <input type="text" id="txtExpiration_packageModify" disabled="disabled" data-dojo-type="dijit/form/TextBox"/>
+
+        </div><!--l_column_thirds-->
+        
+    </div><!--l_row-->
+    
+    <div class="l_row_pad" id="package_tabs">
+        <div data-dojo-type="dijit/layout/TabContainer" id="tabs_packageModify" data-dojo-props="doLayout:false">
+            <div data-dojo-type="dijit/layout/ContentPane" title="Classification" data-dojo-props="selected:true">
+                <div class="l_row_pad"><div id="classificationGrid_packageModify"></div></div>
+                <div class="l_row_pad">
+                    <span class="modify">
+                    <button id="btnClassMoveUp_packageModify" type="button" data-dojo-type="dijit/form/Button">Move Up</button>
+                    <button id="btnClassMoveDown_packageModify" type="button" data-dojo-type="dijit/form/Button">Move Down</button>
+                    <button id="btnClassRemove_packageModify" type="button" data-dojo-type="dijit/form/Button">Remove</button>
+                    <button id="btnClassAdd_packageModify" type="button" data-dojo-type="dijit/form/Button">Add</button>
+                    </span>
+                    <button id="btnClassFullScreen_packageModify" type="button" data-dojo-type="dijit/form/Button">Full Screen</button>
+                </div><!--l_row-->
+            </div><!--TabContainer-->
+            <div data-dojo-type="dijit/layout/ContentPane" title="Sub-Classification">
+                <div class="l_row_pad"><div id="subClassificationGrid_packageModify"></div></div>
+                <div class="l_row_pad">
+                    <span class="modify">
+                    <button id="btnSubClassMoveUp_packageModify" type="button" data-dojo-type="dijit/form/Button">Move Up</button>
+                    <button id="btnSubClassMoveDown_packageModify" type="button" data-dojo-type="dijit/form/Button">Move Down</button>
+                    <button id="btnSubClassRemove_packageModify" type="button" data-dojo-type="dijit/form/Button">Remove</button>
+                    <button id="btnSubClassAdd_packageModify" type="button" data-dojo-type="dijit/form/Button">Add</button>
+                    </span>
+                    <button id="btnSubClassFullScreen_packageModify" type="button" data-dojo-type="dijit/form/Button">Full Screen</button>
+                </div><!--l_row-->
+            </div><!--TabContainer-->
+            <div data-dojo-type="dijit/layout/ContentPane" title="Document Number">
+                <div id="documentGridWraper_packageModify">
+                <div class="l_row_pad"><div id="documentGrid_packageModify"></div></div>
+                <div class="l_row_pad">
+                    <span class="modify">
+                    <button id="btnDocumentMoveUp_packageModify" type="button" data-dojo-type="dijit/form/Button">Move Up</button>
+                    <button id="btnDocumentMoveDown_packageModify" type="button" data-dojo-type="dijit/form/Button">Move Down</button>
+                    <button id="btnDocumentRemove_packageModify" type="button" data-dojo-type="dijit/form/Button">Remove</button>
+                    <button id="btnDocumentAddForm_packageModify" type="button" data-dojo-type="dijit/form/Button">Add Form</button>
+                    <button id="btnDocumentRecord_packageModify" type="button" data-dojo-type="dijit/form/Button">Add Record</button>
+                    </span>
+                    <button id="btnDocumentFullScreen_packageModify" type="button" data-dojo-type="dijit/form/Button">Full Screen</button>
+                    
+                </div><!--l_row-->
+                </div><!--documentGridWraper_packageModify-->
+            </div><!--contentPane-->
+        </div><!--TabContainer-->
+    </div><!--l_row_pad-->
+    
+    <div class="l_row_pad">
+        <div id="packageGridView"></div>
+    </div>
+    <div class="l_row_pad">
+        <span class="modify">
+    	<button id="btnSave_packageModify" type="button" data-dojo-type="dijit/form/Button">Save</button>
+        <button id="btnClone_packageModify" type="button" data-dojo-type="dijit/form/Button">Clone</button>
+        </span>
+        <button id="btnHistory_packageHistory" type="button" data-dojo-type="dijit/form/Button">History</button>
+    	<button id="btnCancel_packageModify" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+    </div>
+    
+    <div id="popUp" class="l_full_screen">
+        <div id="gridPopUp"></div>
+    </div><!--popUp-->
+    
+    <div id="notice" class="l_pop_up">exit
+        <div class="l_pop_up_content">
+            <div href="#" id="btnCloseNotice_packageModify" class="l_pop_up_btn">X</div>
+            pop_up
+        </div>
+    </div><!--notice-->
+    
+
+    <div data-dojo-type="dijit.Dialog" style="display:none;width:300px" id="classftnDialogAddClass_packageModify" name="classftnDialogAddClass_packageModify" data-dojo-props="title:'Add Classifications'">
+
+            
+    </div>
+</div>

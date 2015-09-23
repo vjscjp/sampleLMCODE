@@ -1,0 +1,659 @@
+{
+    "id": "frmsApp",
+    "loaderConfig": {
+		"paths": {
+			"appBase": "/frmsadmin",
+			"nls":"/frmsadmin/nls",
+			"utilities":"/frmsadmin/controllers/utilities"
+		}
+	},
+    "dependencies": [
+        "dijit/layout/BorderContainer",
+        "dijit/layout/ContentPane",
+        "dijit/layout/TabContainer",
+        "dijit/form/TextBox",
+        "dijit/form/Button",
+        "dijit/form/DateTextBox",
+        "dojox/form/CheckedMultiSelect",
+        "dijit/form/FilteringSelect",
+        "dijit/form/Textarea",
+        "dojo/store/Observable",
+        "dojo/store/JsonRest",
+        "dijit/TitlePane",
+        "dijit/form/MultiSelect",
+        "dojox/grid/EnhancedGrid"
+   ],
+    packages: [
+        { name: "controllers", location: "/frmsadmin/controllers" }
+    ],
+    "controllers": [
+        "dojox/app/controllers/Load",
+        "dojox/app/controllers/Transition",
+        "controllers/appLayout.js"
+        ],
+    "has" : {
+        "ie9orLess": {
+            "controllers": [
+                "dojox/app/controllers/HistoryHash"
+            ]
+        },
+        "!ie9orLess" : {
+            "controllers": [
+                "dojox/app/controllers/History"
+            ]
+        }
+    },
+     "stores": {
+          
+        "recordsMemory": {
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "id"
+            }
+        },
+        "jsonRestRecords": {
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/frmsadminservice/api/v1/records/",
+                "syncMode":true
+            }
+        },
+         
+        "formsSearchMemory": {
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "formList.formId"
+            }
+        },
+        "jsonRestFormList": {
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/frmsadminservice/api/v1/forms/list",
+                "idProperty": "id"
+            }
+        },
+        
+        "formDetailMemory": {
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "id"
+            }
+        },
+            
+        "jsonRestFormDetails": {
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/frmsadminservice/api/v1/forms/",
+                "idProperty": "id"
+            }
+        },
+        "formCreationMemory": {
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "id"
+            }
+        },
+            
+        "jsonRestEndPoint": {
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/frmsadminservice/api/v1/forms",
+                "idProperty": "id"
+            }
+        },
+         
+        "packagesMemory":{
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "cd"
+            }
+        },
+        "packageNmMemory":{
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "value"
+            }
+        },
+        "packagesRest": {
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/frmsadminservice/api/v1/packages/" 
+            }
+        },
+         
+        "documentsMemory":{
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "cd"
+            }
+        },
+        "documentsRest": {
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/frmsadminservice/api/v1/documents/"
+            }
+        },
+         
+        "userMemory": {
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "id"
+            }
+        },
+        "jsonUserDetails": {
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/frmsadminservice/api/v1/users/",
+                "idProperty": "id"                
+            }
+        },
+        "currentUserMemory": {
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "identifier"
+            }
+        },
+        "activeUserDetails":{
+           "type":"dojo/store/JsonRest",
+            "params":{
+                "target":"/frmsadminservice/api/v1/activeusers/",
+                "idProperty":"id"
+            }
+        },
+        "archiveUserDetails":{
+            "type":"dojo/store/JsonRest",
+            "params":
+            {
+                "target":"/frmsadminservice/api/v1/archivedusers/",
+                "idProperty":"id"
+            }
+        },
+        "releaseGroupsJsonRest": {
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/frmsadminservice/api/v1/releasegroups",
+                "idProperty": "id" 
+            }
+        },
+        "prodMemoryStore":{
+                "type": "dojo/store/Memory",
+                "observable": true,
+                "params": {
+                    "idProperty": "masterProductCode"
+                }
+        },
+        "jsonProdRestDetails":{
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/ILCommonRestSvcsWeb/api/v1/products/table",
+                "idProperty": "masterProductCode"
+                
+            }
+        },
+        "productLOBMemStore":{
+                "type": "dojo/store/Memory",
+                "observable": true,
+                "params": {
+                    "idProperty": "value"
+                }
+        },
+        "productTypeMemStore":{
+                "type": "dojo/store/Memory",
+                "observable": true,
+                "params": {
+                    "idProperty": "value"
+                }
+        },
+        "productSeriesMemStore":{
+                "type": "dojo/store/Memory",
+                "observable": true,
+                "params": {
+                    "idProperty": "value"
+                }
+        },
+        "productCSOMTMemStore":{
+                "type": "dojo/store/Memory",
+                "observable": true,
+                "params": {
+                    "idProperty": "value"
+                }
+        },          
+        "productSubTypeMemStore":{
+                "type": "dojo/store/Memory",
+                "observable": true,
+                "params": {
+                    "idProperty": "value"
+                }
+        },
+        "productNamesMemStore":{
+                "type": "dojo/store/Memory",
+                "observable": true,
+                "params": {
+                    "idProperty": "value"
+                }
+        },
+        "productMktNamesMemStore":{
+                "type": "dojo/store/Memory",
+                "observable": true,
+                "params": {
+                    "idProperty": "value"
+                }
+        },
+        "stateMemStore":{
+                "type": "dojo/store/Memory",
+                "observable": true,
+                "params": {
+                    "idProperty": "targetCode"
+            }
+        },
+        "jsonStateRestDetails":{
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/ILCommonRestSvcsWeb/api/v1/references/data?tableName=STATE&sourceName=FRMS&targetName=FRMS",
+                "idProperty": "id"
+            }
+        },
+        "stateTypeMemStore":{
+                "type": "dojo/store/Memory",
+                "observable": true,
+                "params": {
+                    "idProperty": "targetCode"
+            }
+        },
+        "jsonStateTypeRestDetails":{
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/ILCommonRestSvcsWeb/api/v1/references/data?tableName=STATE TYPE&sourceName=FRMS&targetName=FRMS",
+                "idProperty": "id"
+            }
+        },
+        "docFormTypeMemoryStore":{
+                "type": "dojo/store/Memory",
+                "observable": true,
+                "params": {
+                    "idProperty": "targetCode"
+                }
+        },
+        "jsonDocFormTypeRestDetails":{
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/ILCommonRestSvcsWeb/api/v1/references/data?tableName=DOCUMENT TYPE&sourceName=FRMS&targetName=FRMS",
+                "idProperty": "id",
+                "sortParam": "sortBy"
+            }
+        },
+        "businessFunMemStore":{
+                "type": "dojo/store/Memory",
+                "observable": true,
+                "params": {
+                    "idProperty": "targetCode"
+            }
+        },
+        "jsonBusiFunRestDetails":{
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/ILCommonRestSvcsWeb/api/v1/references/data?tableName=BUSINESS FUNCTION&sourceName=FRMS&targetName=FRMS",
+                "idProperty": "id"
+            }
+        },
+        "clasftnMemStore":{
+                "type": "dojo/store/Memory",
+                "observable": true,
+                "params": {
+                    "idProperty": "targetCode"
+            }
+        },
+        "jsonClassiftnRestDetails":{
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/ILCommonRestSvcsWeb/api/v1/references/data?tableName=DOCUMENT CLASSIFICATION&sourceName=FRMS&targetName=FRMS",
+                "idProperty": "id"
+            }
+        },
+        "subClassMemStore":{
+                "type": "dojo/store/Memory",
+                "observable": true,
+                "params": {
+                    "idProperty": "targetCode"
+            }
+        },
+        "jsonSubclassftnRestDetails":{
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/ILCommonRestSvcsWeb/api/v1/references/data?tableName=DOCUMENT SUBCLASSIFICATION&sourceName=FRMS&targetName=FRMS",
+                "idProperty": "id"
+            }
+        },
+        
+        "timingReqMemStore":{
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "targetCode"
+            }
+        },
+        "jsontimingReqRestDetails":{
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/ILCommonRestSvcsWeb/api/v1/references/data?tableName=TIMING REQUIREMENT&sourceName=FRMS&targetName=FRMS",
+                "idProperty": "id"
+            }
+        },
+        "timingCdMemStore":{
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "targetCode"
+            }
+        },
+        "jsontimingCdRestDetails":{
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/ILCommonRestSvcsWeb/api/v1/references/data?tableName=TIMING CODE&sourceName=FRMS&targetName=FRMS",
+                "idProperty": "id"
+            }
+        }
+        ,
+        "distChanMemStore":{
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "targetCode"
+            }
+        },
+        "jsonDistChanRestDetails":{
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/ILCommonRestSvcsWeb/api/v1/references/data?tableName=DISTRIBUTION CHANNEL&sourceName=FRMS&targetName=FRMS",
+                "idProperty": "id"
+            }
+        },
+        "docContentTypeMemStore":{
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "targetCode"
+            }
+        },
+        "jsonDocContentTypeRestDetails":{
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/ILCommonRestSvcsWeb/api/v1/references/data?tableName=CONTENT TYPE&sourceName=FRMS&targetName=FRMS",
+                "idProperty": "id"
+            }
+        },
+        "nppiPciDesnMemStore":{
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "value"
+            }
+        },
+        "secLvlCdMemStore":{
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "targetCode"
+            }
+        },
+        "jsonsecLvlCdRestDetails":{
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/ILCommonRestSvcsWeb/api/v1/references/data?tableName=SECURITY LEVEL CODE TYPE&sourceName=FRMS&targetName=FRMS",
+                "idProperty": "id"
+            }
+        },
+		"jsonDocTemplateTypeRestDetails":{
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/ILCommonRestSvcsWeb/api/v1/references/data?tableName=DOCUMENT TEMPLATE TYPE&sourceName=FRMS&targetName=FRMS",
+                "idProperty": "id"
+            }
+        },
+		"docTemplateTypeMemory":{
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "targetCode"
+            }
+        },
+		"fetchedDocTemplateTypeMemory":{
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "targetCode"
+            }
+        },
+		"formsTmplRepRestSvcsEndPoint":{
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/ILFormsTmplRepRestSvcsWeb/api/v1/",
+                "idProperty": "id" 
+            }
+        },
+		"queryExceptionDateStore":{
+            "type": "dojo/store/Memory",
+            "observable": true,
+            "params": {
+                "idProperty": "targetCode"
+            }
+        },
+        "queryExDtRestSvcsEndPoint":{
+            "type": "dojo/store/JsonRest",
+            "params": {
+                "target": "/ILCommonRestSvcsWeb/api/v1/references/data?tableName=DATE TYPE&sourceName=FRMS&targetName=FRMS",
+                "idProperty": "id"
+            }
+        }
+    },      
+    
+    "defaultView": "main+formsCreate+formsNav",
+    "views": {
+        "main": {
+            "template": "./views/main.html",
+            "controller": "./controllers/main.js"
+        },
+        "recordsSearch": {
+            "template": "./views/records/recordsSearch.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/records/recordsSearch.js"
+        },
+        "recordsNav": {
+            "template": "./views/records/recordsNav.html",
+            "constraint": "frmsNav",
+            "controller": "./controllers/records/recordsNav.js"
+        },
+        "recordsCreate": {
+            "template": "./views/records/recordsCreate.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/records/recordsCreate.js"
+        },
+        "recordsViewModify": {
+            "template": "./views/records/recordsViewModify.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/records/recordsViewModify.js"
+        },
+        "recordsHistory": {
+            "template": "./views/records/recordsHistory.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/records/recordsHistory.js"
+        },
+        "recordComments": {
+            "template": "./views/records/recordComments.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/records/recordComments.js"
+        },
+        "duplicateRecord": {
+            "template": "./views/records/duplicateRecordConfirmation.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/records/duplicateRecordConfirmation.js"
+        },
+        "formsCreate": {
+            "template": "./views/forms/forms.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/forms/forms.js"
+        },
+        "formsNav": {
+            "template": "./views/forms/formsNav.html",
+            "constraint": "frmsNav",
+            "controller": "./controllers/forms/formsNav.js"
+        },
+        "packagesSearch": {
+            "template": "./views/packages/packagesSearch.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/packages/packagesSearch.js"
+        },
+        "packagesSelect": {
+            "template": "./views/packages/packagesSelect.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/packages/packagesSelect.js"
+        },
+        "packagesViewModify": {
+            "template": "./views/packages/packagesViewModify.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/packages/packagesViewModify.js"
+        },
+        "packagesAddClass": {
+            "template": "./views/packages/packagesAddClass.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/packages/packagesAddClass.js"
+        },
+        "packagesAddRecords": {
+            "template": "./views/packages/packagesAddRecords.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/packages/packagesAddRecords.js"
+        },
+        "packagesAddForms": {
+            "template": "./views/packages/packagesAddForms.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/packages/packagesAddForms.js"
+        },
+        "packagesVerifyOrder": {
+            "template": "./views/packages/packagesVerifyOrder.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/packages/packagesVerifyOrder.js"
+        },
+        
+        "packagesClone": {
+            "template": "./views/packages/packagesClone.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/packages/packagesClone.js"
+        },
+        "packagesHistory": {
+            "template": "./views/packages/packagesHistory.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/packages/packagesHistory.js"
+        },
+        "packagesComments": {
+            "template": "./views/packages/packagesComments.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/packages/packagesComments.js"
+        },
+        
+        "packagesNav": {
+            "template": "./views/packages/packagesNav.html",
+            "constraint": "frmsNav",
+            "controller": "./controllers/packages/packagesNav.js"
+        },
+        
+        "promotionInProgress": {
+            "template": "./views/promotions/promotionsInProgress.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/promotions/promotionsInProgress.js"
+        },
+        "promotionCreate": {
+            "template": "./views/promotions/promotionCreate.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/promotions/promotionCreate.js"
+        },
+        "promotionProduction": {
+            "template": "./views/promotions/production.html",
+            "constraint": "promotion",
+            "controller": "./controllers/promotions/promotionsInProduction.js"
+        },
+        "promotionCanceled": {
+            "template": "./views/promotions/canceled.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/promotions/promotionsCanceled.js"
+        },
+        "promotionNav": {
+            "template": "./views/promotions/promotionsNav.html",
+            "constraint": "frmsNav",
+            "controller": "./controllers/promotions/promotionsNav.js"
+        },
+        "releaseGroup": {
+            "template": "./views/promotions/releaseGroup.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/promotions/releaseGroup.js"
+        },
+        "unassignedDocuments": {
+            "template": "./views/promotions/unassignedDocuments.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/promotions/unassignedDocuments.js"
+        },
+        "users": {
+            "template": "./views/users/users.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/users/users.js"
+        },
+        "usersNav": {
+            "template": "./views/users/usersNav.html",
+            "constraint": "frmsNav",
+            "controller":"./controllers/users/userNav.js"
+        },
+        "addUser": {
+            "template": "./views/users/addUser.html",
+            "constraint": "users",
+            "controller": "./controllers/users/addUser.js"
+        },
+         "archivedUsers": {
+            "template": "./views/users/archivedUsers.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/users/archivedUsers.js"
+        },
+         "editUser": {
+            "template": "./views/users/editUser.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/users/editUser.js"
+        },
+        "userHistory": {
+            "template": "./views/users/userHistory.html",
+            "constraint": "users",
+            "controller": "./controllers/users/userHistory.js"
+        },
+        "products": {
+            "template": "./views/products.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/common/products.js"
+        },
+		"formTemplates": {
+            "template": "./views/forms/formTemplates.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/forms/formTemplates.js"
+        },
+		"uploadFormTemplate": {
+            "template": "./views/forms/uploadFormTemplate.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/forms/uploadFormTemplate.js"
+        },
+		"formAssociationToPackage": {
+            "template": "./views/forms/formAssociationToPackage.html",
+            "constraint": "frmsContent",
+            "controller": "./controllers/forms/formAssociationToPackage.js"
+        },
+        "errorPage" : {
+        	"template": "./views/errorPage.html",
+            "controller": "./controllers/common/error.js"
+        }
+		
+    }
+}

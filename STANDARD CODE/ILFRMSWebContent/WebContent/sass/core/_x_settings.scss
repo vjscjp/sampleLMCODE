@@ -1,0 +1,69 @@
+// *************************************
+//
+//   Settings
+//   -> Fonts, Variables
+//
+// *************************************
+
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// ----- Base Colors ----- //
+// Taken from Employee BrandBook v2 2013
+
+// Logo colors
+$base-corp-blue:	#002663;
+$base-corp-grey:	#616265;
+$base-white:		#FFFFFF;
+
+// Secondairy colors
+$base-red:			#c9282d;
+$base-orange:		#d97a23;
+$base-yellow:		#ecac00;
+$base-green:		#6c953c;
+$base-teal:			#569099;
+$base-blue:			#5381ac;
+
+// Set text
+$base-text: 		$base-corp-grey;
+$base-link-color: 	$base-teal;
+
+// set items
+$base-border:		lighten($base-corp-grey,25%);
+
+// All colors can be used in 75% and 50% opacity
+
+
+// ---------------------------------------------------------------
+//   @font-face from Employee Brandbook v2 2013 - www.lmglogos.com
+// ---------------------------------------------------------------
+
+
+// ----- Arial ----- //
+// Use: Normal: Body
+//		Light : Callouts, pull, quotes
+//		Bold  : Headline and Callouts
+//		Narrow: Advertising, Logo Taglines
+$base-font: "Arial";
+
+
+// ----- Allowed font is Rockwell, free alternative is Rickkitt ----- //
+// Use: Normal: Intro copy, callout
+//		Bold  : Header, Table Headers
+@import url(//fonts.googleapis.com/css?family=Rokkitt:400,700);
+$base-fontHeader: "Rokkitt";
+
+// ----- Allowed font is ITC Garamond, free alternative is EB Garmond ----- //
+// Use: Normal: Image caption and pull quotes 
+@import url(//fonts.googleapis.com/css?family=EB+Garamond);
+$base-fontCaption: "EB Garamond";
+$base-fontSize: 16px;
+$base-lineHeight: 1.2;
+
+// ----- Base Layout ----- //
+$base-whitespace: 20px;
+
+// ----- Layout ----- //
+$l-maxWidth: 980px;

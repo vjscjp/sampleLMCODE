@@ -1,0 +1,79 @@
+<div>
+    <h3>Add User</h3>
+    <div class="l_rounded_border_column">
+        <form id="addUserForm_addUser" data-dojo-type="dijit/form/Form">
+        <div class="l_row_pad">
+            <label for="addNid">* N#</label>
+            <input type="text" id="addNid_addUser" name="userIdentifier" data-dojo-type="dijit/form/ValidationTextBox"
+                data-dojo-props="maxlength:8,required:true" />
+            <label for="addLastName">* Last Name</label>
+            <input type="text" name="userLastName" id="addLastName_addUser"  data-dojo-type="dijit/form/ValidationTextBox"
+                data-dojo-props="required:true" />
+            <label for="addFirstName">* First Name</label>
+            <input type="text" id="addFirstName_addUser" name="userFirstName" data-dojo-type="dijit/form/ValidationTextBox"
+                data-dojo-props="required:true" />
+       </div>
+       <div class="l_row_pad">
+            <table>
+                <tr>
+                    <td>
+                        <label for="usrFrmWrite">
+                            <input type="checkbox" name="formsWriteIndicator" id="usrFrmWrite_addUser" checked data-dojo-type="dijit.form.CheckBox"
+                            data-dojo-props="checked: true">Forms
+							Write&nbsp;&nbsp; </label>
+                    </td>
+                    <td>
+                        <label for="usrRecWrite">
+                            <input type="checkbox" name="recordsWriteIndicator" id="usrRecWrite_addUser" checked data-dojo-type="dijit.form.CheckBox"
+                            data-dojo-props="checked: false"> Records
+							Write&nbsp;&nbsp;</label>
+                    </td>
+                    <td>
+                        <label for="usrPackWrite">
+                            <input type="checkbox" name="packagesWriteIndicator" id="usrPpackWrite_addUser" checked
+                            data-dojo-type="dijit.form.CheckBox" data-dojo-props="checked: true"> Package
+							Write&nbsp;&nbsp; </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="usrFrmsPrmo">
+                            <input type="checkbox" name="frmsPromoteIndicator" id="usrFrmsPrmo_addUser" checked data-dojo-type="dijit.form.CheckBox"
+                            data-dojo-props="checked: false"> FRMS Promote&nbsp;&nbsp;
+                        </label>
+                    </td>
+                    <td>
+                        <label for="usrUuserAdmin">
+                            <input type="checkbox" name="userAdministratorIndicator" id="usrUserAdmin_addUser" checked
+                            data-dojo-type="dijit.form.CheckBox" data-dojo-props="checked: false"> User
+							Administrator</label>
+                    </td>
+                </tr>
+            </table>
+            <input type="hidden" id="userStatus_addUser" name="userStatus" data-dojo-type="dijit/form/TextBox"
+            value="Active" />
+            <input type="hidden" id="userDepartment_addUser" name="userDepartment" data-dojo-type="dijit/form/TextBox"
+            value="LifeWorks" />
+            <input type="hidden" id="effectiveDateTime_addUser" name="effectiveDateTime" data-dojo-type="dijit/form/TextBox"
+            value="" />
+            <input type="hidden" id="endDateTime_addUser" name="endDateTime" data-dojo-type="dijit/form/TextBox"
+            value="" /> 
+            </div></form>
+    </div>
+    
+    <div class="l_row_pad">
+        <table>
+            <tr>
+                <td>
+                    <button id="addUsrSave_addUser" type="button" data-dojo-type="dijit/form/Button">Save</button>
+                </td>
+                <td>
+                    <button id="addUsrCancel_addUser" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

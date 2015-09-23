@@ -1,0 +1,65 @@
+<div class="l_main_area">
+    <h3>Packages Search</h3>
+    
+    <form data-dojo-type="dijit/form/Form" id="form_packageSearch">
+    
+    <div class="l_row_pad l_as_table">
+        <div class="l_column_thirds l_as_table_cell">
+            <div class="l_rounded_border_column">
+                <label for="txtPackageName_packageSearch">Package Name</label>
+                <input type="text" id="txtPackageName_packageSearch" data-dojo-type="dijit/form/TextBox" />
+
+                <!--<label>Package Timing Code</label>
+                <div id="selTimingCode_packageSearch"></div>-->
+
+                <label>Product Sub Type</label>
+                <select id="selProductType_packageSearch" data-dojo-type="dojox/form/CheckedMultiSelect" 
+                        data-dojo-props="dropDown: true, multiple: true, required: false"></select>
+
+                <label>Form Type</label>
+                <!--<select id="selFormType_packageSearch"  data-dojo-type="dijit/form/FilteringSelect"></select>-->
+                <select id="selFormType_packageSearch" data-dojo-type="dojox/form/CheckedMultiSelect" 
+                        data-dojo-props="dropDown: true, multiple: true, required: false"></select>
+
+                <label>As of Date</label>
+                <input id="selAsOfDate_packageSearch" data-dojo-type="dijit/form/DateTextBox" />
+
+            </div><!--l_rounded_border-->
+        </div><!--l_column_thirds-->
+        <div class="l_column_thirds l_as_table_cell">
+            <div class="l_rounded_border_column">
+                <label>State(s)</label>
+                <div id="stateList_packageSearch"></div>
+                <!--<select id="selStateList_packageSearch"  data-dojo-type="dijit/form/FilteringSelect"></select>-->
+                <select id="selStateList_packageSearch" data-dojo-type="dojox/form/CheckedMultiSelect" 
+                        data-dojo-props="dropDown: true, multiple: true, required: false"></select>
+                <!--<textarea data-dojo-attach-point="issueSts_formSearch" data-dojo-type="dijit/form/SimpleTextarea" rows="4" cols="35" style="width:300px !important;"
+							data-dojo-props="trim:true, propercase:true, readOnly:true" >
+						</textarea>
+                <button id="btnEditState_packageSearch" type="button" data-dojo-type="dijit/form/Button">Edit</button>-->
+
+                <label>State Type</label>
+                <select id="selStateType_packageSearch"  data-dojo-type="dijit/form/FilteringSelect"></select>
+                
+            </div><!--l_rounded_border-->
+        </div><!--l_column_thirds-->
+        <div class="l_column_thirds l_as_table_cell">
+            &nbsp;
+        </div><!--l_column_thirds-->
+        
+    </div><!--l_row_pad-->
+    
+    <div class="l_row_pad">
+        <button id="btnSearch_packageSearch" type="button" data-dojo-type="dijit/form/Button">Search</button>
+        <button id="btnClear_packageSearch" type="button" data-dojo-type="dijit/form/Button">Clear</button>  
+    </div>
+        
+    </form>
+    
+    <div class="l_row_pad">
+        <div id="packageGrid"></div>
+    </div>
+    <div class="l_row_pad">
+    	<button id="btnExport_packageSearch" type="button" data-dojo-type="dijit/form/Button">Export</button>
+    </div>
+</div>

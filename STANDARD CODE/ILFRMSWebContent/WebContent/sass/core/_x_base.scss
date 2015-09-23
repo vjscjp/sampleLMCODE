@@ -1,0 +1,60 @@
+// *************************************
+//
+//   Base
+//   -> Base-level tags (body, p, etc.)
+//
+// *************************************
+
+html{
+  font-size: $base-fontSize; 
+}
+
+body{
+  color: $base-text;
+  font-family: $base-font;
+  font-size: 100%;
+  line-height: $base-lineHeight;
+  background:url(../images/bkg.jpg) repeat-x;
+ }
+
+// -------------------------------------
+//   Block Content
+// -------------------------------------
+
+p{
+  font-size: rem($base-fontSize);
+ }
+
+// -------------------------------------
+//   Inline Content
+// -------------------------------------
+
+a{
+  color: $base-link-color;
+  text-decoration: none;
+ }
+ a:hover, a:focus{
+    text-decoration: underline;
+ }
+ 
+ // -------------------------------------
+//   Form Items
+// -------------------------------------
+ fieldset{
+ 	border:1px dotted $base-border;
+ 	@extend %border_radius;
+ 	@extend %padding;
+ }
+ legend{
+ 	color:$base-blue;
+ 	font-weight:bold;
+ }
+ 
+ label{
+  	display:block;
+  	padding:0px 0 2px 0;
+ }
+ 
+
+ 
+ 

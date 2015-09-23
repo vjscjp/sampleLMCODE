@@ -1,0 +1,43 @@
+<div>
+    <h3> Record Comments </h3>
+	<div class="l_main_area">
+		<div class="l_row">
+			<div class="l_column_thirds">
+			
+				<label for="recordnum_Comments">Record # :</label> 
+					<input type="text" id="recordnum_Comments" data-dojo-type="dijit/form/TextBox" />
+				
+				<label for="effDate_Comments">Created Date :</label>
+					<input type="text" id="effDate_Comments" data-dojo-type="dijit/form/TextBox" />
+				
+				<label for="recordTitle_Comments">Record Title :</label>
+					<input type="text" id="recordTitle_Comments" data-dojo-type="dijit/form/TextBox" />
+				
+			</div>
+			<div class="l_column_thirds">
+			</div>
+			<div class="l_column_thirds">
+			</div>
+			<br>
+			<div id="recordCommentGridMsg"></div>
+			<br>
+			<div id = "recordCommentGrid"></div>
+			<br>
+			<button id="newCmntBtn_recordComments" type="button" data-dojo-type="dijit/form/Button">New Comment</button>
+			<button id="backBtn_recordComments" type="button" data-dojo-type="dijit/form/Button">Done</button>
+		</div>
+	</div>
+	<!--New comments dialog -->
+	<div data-dojo-type="dijit.Dialog" style="display:none;" id="newCmntDialog_recordComments" name="newCmntDialog_recordComments" 
+		data-dojo-props="title:'Add Comments'">
+		<label for="newRecordComments">Comment</label>
+		<textarea id="newRecordComments" name="newRecordComments" data-dojo-type="dijit/form/SimpleTextarea" class="l_comment_box"
+			data-dojo-props="trim:true, propercase:true">
+		</textarea>
+		<br>
+		<button id="saveBtnCmnt_recordComments" type="button" data-dojo-type="dijit/form/Button">Save</button>
+		<button id="cancelBtn_recordComments" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+		
+	</div>
+	
+</div>

@@ -1,0 +1,51 @@
+<div class="l_main_area">
+    <h3>Order Package Iterations</h3>
+    
+    <div class="l_row_pad">
+        <div class="l_column">
+            
+            <p>Your added <span id="orderType_packagesVerifyOrder">Sub-Classification(s)</span> spans multiple Package Iterations, please update order for each iteration.
+            </p>
+            <label>Iteration</label>
+            <select id="selPackageIteration_packagesVerifyOrder" data-dojo-id="selPackageIteration_packagesVerifyOrder" 
+                    data-dojo-props = "sortByLabel:false" data-dojo-type="dijit/form/Select">
+            </select>
+            
+            <div id="orderClassification_packagesVerifyOrder">
+                <div class="l_row_pad">
+                    <label>Classification Order</label>
+                    <div id="classificationGrid_packagesVerifyOrder"></div>
+                </div>
+            </div><!--orderClassification_packagesVerifyOrder-->
+            
+            <div id="orderSubClassification_packagesVerifyOrder">
+                <div class="l_row_pad">
+                    <label>Sub-Classification Order</label>
+                    <div id="subclassificationGrid_packagesVerifyOrder"></div>
+                </div>
+            </div><!--orderSubClassification_packagesVerifyOrder-->
+            
+            <div id="orderDocuments_packagesVerifyOrder">
+                <div class="l_row_pad">
+                    <label>Document Order</label>
+                    <div id="documentGrid_packagesVerifyOrder"></div>
+                </div>
+            </div><!--orderDocuments_packagesVerifyOrder-->
+            
+            <div class="l_row_pad">
+                <button id="btnMoveUp_packagesVerifyOrder" type="button" data-dojo-type="dijit/form/Button">Move Up</button>
+                <button id="btnMoveDown_packagesVerifyOrder" type="button" data-dojo-type="dijit/form/Button">Move Down</button>
+                <button id="btnFullScreen_packagesVerifyOrder" type="button" data-dojo-type="dijit/form/Button">Full Screen</button>
+            </div>
+            
+            <div class="l_row_pad">
+                <button id="btnFinished_packagesVerifyOrder" type="button" data-dojo-type="dijit/form/Button">Save</button>
+                <button id="btnCancel_packagesVerifyOrder" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+            </div>
+            
+            
+        </div><!--l_column-->
+        
+    </div><!--l_row_pad-->
+
+</div>

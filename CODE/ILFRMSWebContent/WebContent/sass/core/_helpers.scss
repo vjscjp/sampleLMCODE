@@ -1,0 +1,109 @@
+// *************************************
+//
+//   Helpers
+//   -> Extends, Functions, Mixins, Animations
+//
+// *************************************
+
+// standard floats in place of flaot:left; doesn't need clear.
+.flt{
+	display:inline-block;
+	vertical-align:top;
+	margin-right:-4px;
+}
+// shared mixin
+%border_radius{
+	border-radius:6px;
+}
+%border_radius_bottom{
+	@extend %border_radius;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+%border_radius_top{
+	@extend %border_radius;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+%padding{
+	padding:7px 10px;
+}
+.hidden{
+	display:none;
+}
+
+// -------------------------------------
+//   Extends
+// -------------------------------------
+
+// ----- Debug ----- //
+
+%debug{
+  background-color: pink !important;
+ }
+
+// ----- Ellipsis ----- //
+
+%ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// ----- Clearfix ----- //
+
+%group:after{
+  clear: both;
+  content: '';
+  display: table;
+}
+// ----- Image Replacement ----- //
+
+%ir{
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  &:before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 150%;
+  }
+}
+// -------------------------------------
+//   Functions
+// -------------------------------------
+
+// ----- em ----- //
+
+@function em($target, $context: $base-fontSize){
+  @if $target == 0{
+    @return 0;
+  }  @else{
+    @return #{$target / $context}em;
+  }
+}
+
+// ----- rem ----- //
+
+@function rem($size){
+  @return #{$size / $base-fontSize}rem;
+ }
+
+// -------------------------------------
+//   Mixins
+// -------------------------------------
+
+// ----- Respond-to ----- //
+
+@mixin respond-to($val, $query: min-width, $media: screen){
+  @media #{$media} and ($query: $val){
+    @content;
+  }
+ }
+
+// -------------------------------------
+//   Animations
+// -------------------------------------

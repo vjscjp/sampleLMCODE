@@ -1,0 +1,94 @@
+<div>
+	<b><label for="productDetails">Products</label></b>
+    <div id = "productDetails" class="l_main_area">
+		<form id="form_product" data-dojo-type="dijit/form/Form" encType="multipart/form-data" action="" method="">
+				
+				<div class="l_main_area">
+					<div class="l_row">
+						<div class="l_column_thirds">
+						<label for="formNum_products">Form Number : <input type="text" id="formNum_products" data-dojo-type="dijit/form/TextBox" /> </label> 
+						</div>
+						<div class="l_column_thirds">
+							<label for="revDate_products">Revision Date : <input type="text" id="revDate_products" data-dojo-type="dijit/form/TextBox" /> </label> 
+						</div>
+						<div class="l_column_thirds">
+							<label for="formDesc_products">Form Description : <input type="text" id="formDesc_products" data-dojo-type="dijit/form/TextBox" /> </label>
+						</div>
+					</div>
+				</div>	
+				<div class="l_column_half" id="firstHalf">
+					<div id= "prod_lob_title" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Line of Business'" style = "margin-left:5%; width:95%;">
+						<select id="prod_lob" name="prod_lob" data-dojo-type="dojox/form/CheckedMultiSelect"
+							data-dojo-props="multiple: true, required: false" value: "" style="width:500px;"></select>
+					</div>
+					<br>
+					<div id= "prod_type_title" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Product Type'" style = "margin-left:5%; width:95%;">
+						<select id="prod_type" name="prod_type" data-dojo-type="dojox/form/CheckedMultiSelect"
+							data-dojo-props="multiple: true, required: false" value: "" style="width:500px;"></select>
+						<br>	
+						<span>
+							<button  id="prod_type_select_all" type="button" data-dojo-type="dijit/form/Button">Select All</button>
+							<button  id="prod_type_deselect_all" type="button" data-dojo-type="dijit/form/Button">Deselect All</button>
+						</span>
+					</div>
+					<br>
+					<div id= "prod_series_title" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Product Series Name'" style = "margin-left:5%; width:95%;">
+						<select id="prod_series" name="prod_series" data-dojo-type="dojox/form/CheckedMultiSelect"
+							data-dojo-props="multiple: true, required: false" value: "" style="width:500px;"></select>
+						<br>
+						<span>
+							<button  id="prod_series_select_all" type="button" data-dojo-type="dijit/form/Button">Select All</button>
+							<button  id="prod_series_deselect_all" type="button" data-dojo-type="dijit/form/Button">Deselect All</button>
+						</span>
+					</div>
+					<br>
+					<div id= "prod_CSO_MT_title" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Product Series Mortality Table'" style = "margin-left:5%; width:95%;">
+						<select id="prod_CSO_MT" name="prod_CSO_MT" data-dojo-type="dojox/form/CheckedMultiSelect"
+							data-dojo-props="multiple: true, required: false" value: "" style="width:500px;"></select>
+					</div>
+				</div>
+				<div class="l_column_half" id="secondHalf">
+					<div id= "prod_sub_type_title" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Product Sub Type'" style = "margin-left:5%; width:95%;">
+						<select id="prod_sub_type" name="prod_sub_type" data-dojo-type="dojox/form/CheckedMultiSelect"
+							data-dojo-props="multiple: true, required: false" value: "" style="width:500px;"></select>
+						<br>
+						<span>
+							<button  id="prod_sub_type_select_all" type="button" data-dojo-type="dijit/form/Button">Select All</button>
+							<button  id="prod_sub_type_deselect_all" type="button" data-dojo-type="dijit/form/Button">Deselect All</button>
+						</span>
+					</div>
+					<br>
+					<div id= "prod_name_title" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Product Name'" style = "margin-left:5%; width:95%;">
+						<select id="prod_name" name="prod_name" data-dojo-type="dojox/form/CheckedMultiSelect"
+							data-dojo-props="multiple: true, required: false" value: "" style="width:500px;"></select>
+						<br>
+						<span>
+							<button  id="prod_name_select_all" type="button" data-dojo-type="dijit/form/Button">Select All</button>
+							<button  id="prod_name_deselect_all" type="button" data-dojo-type="dijit/form/Button">Deselect All</button>
+						</span>
+					</div>
+					<br>
+					<div id= "prod_mrkt_nm_title" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Product Marketing Name'" style = "margin-left:5%; width:95%;">
+						<select id="prod_mrkt_nm" name="prod_mrkt_nm" data-dojo-type="dojox/form/CheckedMultiSelect"
+							data-dojo-props="multiple: true, required: false" value: "" style="width:500px;"></select>
+						<br>
+						<span>
+							<button  id="prod_mrkt_nm_select_all" type="button" data-dojo-type="dijit/form/Button">Select All</button>
+							<button  id="prod_mrkt_nm_deselect_all" type="button" data-dojo-type="dijit/form/Button">Deselect All</button>
+						</span>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+			<span>
+				<button  id="prod_save" type="button" data-dojo-type="dijit/form/Button">Save</button>
+				<button  id="prod_cancel" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+				<button  id="prod_reset" type="button" data-dojo-type="dijit/form/Button">Reset</button>
+			</span>
+			
+		</form>
+	<div>
+	
+</div>

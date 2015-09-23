@@ -1,0 +1,204 @@
+<div class="${baseClass}">
+            
+            <form data-dojo-attach-point="form_formSearch" data-dojo-type="dijit/form/Form" encType="multipart/form-data" action="" method="">
+
+			<div class="l_main_area">
+			
+			   <div class="l_row">
+					<div class="l_column_thirds">
+						<label for="formNum_formSearch" class="tempFormNumClass">Form Number</label>
+						<!-- <input type="text" data-dojo-attach-point="formNum_formSearch" data-dojo-type="dijit/form/ValidationTextBox" /> -->
+						<textarea data-dojo-attach-point="formNum_formSearch" name="formNum_formSearch" data-dojo-type="dijit/form/SimpleTextarea" 
+							rows="2" cols="34" data-dojo-props="trim:true, propercase:true, maxLength:100" >
+                        </textarea>
+						
+						<label for="formAsOfDate_formSearch" class = "tempSearchFldClass">As of Date</label>
+						<input type="text" data-dojo-attach-point="formAsOfDate_formSearch" data-dojo-type="dijit/form/DateTextBox" class = "noFocusClass"
+							style="width: 200px;"/>
+						
+						<label for="dateType_formSearch" class = "tempSearchFldClass">Date Type</label>
+						<select data-dojo-attach-point="dateType_formSearch" data-dojo-type="dijit/form/Select" 
+							style="width: 200px;" value: "" required = "true" class = "noFocusClass" > 
+							<option value="lifeEffDt">Life Effective Date</option>
+							<option value="stateEffDt">State Effective Date</option>
+							
+						</select>
+					
+						<label for="prodNames_formSearch">Product Names</label>
+						<select data-dojo-attach-point="prodNames_formSearch" class="narrow scroll" data-dojo-type="dojox/form/CheckedMultiSelect" 
+							   data-dojo-props="dropDown: true, multiple: true, required: false" value:" " required="true"></select>
+						
+						<label for="prodSeries_formSearch" class = "tempSearchFldClass">Product Series</label>
+						<select data-dojo-attach-point="prodSeries_formSearch" data-dojo-type="dojox/form/CheckedMultiSelect"
+						    data-dojo-props="dropDown: true, multiple: true, required: true" required="true" value:" " 
+								class ="noFocusClass"></select>
+						
+						<label for="prodTypes_formSearch">Product Type</label>
+						<select data-dojo-attach-point="prodTypes_formSearch" data-dojo-type="dojox/form/CheckedMultiSelect"
+							   data-dojo-props="dropDown: true, multiple: true, required: false" value:" "></select>
+						
+					</div>
+					<div class="l_column_thirds">
+					
+						<label for="issueSts_formSearch">Issue State(s)</label>
+						<textarea data-dojo-attach-point="issueSts_formSearch" data-dojo-type="dijit/form/SimpleTextarea" rows="4" cols="35" style="width:300px !important;"
+							data-dojo-props="trim:true, propercase:true, readOnly:true" >
+						</textarea> <br>
+						<button data-dojo-attach-point="edit_issueStBtn_formSearch" type="button" data-dojo-type="dijit/form/Button">Edit</button>
+						
+						<label for="resdncsts_formSearch">Residence State(s)</label>
+						<textarea data-dojo-attach-point="resdncsts_formSearch" data-dojo-type="dijit/form/SimpleTextarea" rows="4" cols="35" style="width:300px;" 
+							data-dojo-props="trim:true, propercase:true, readOnly:true">
+						</textarea> <br>
+						<button data-dojo-attach-point="edit_residenseStBtn_formSearch" type="button" data-dojo-type="dijit/form/Button">Edit</button>
+						
+						<label for="docFormType_formSearch">Form Type</label>
+						<select data-dojo-attach-point="docFormType_formSearch" data-dojo-type="dojox/form/CheckedMultiSelect"
+							   data-dojo-props="dropDown: true, multiple: true, required: false" value:""></select>
+						
+						<label for="busnsFunctn_formSearch">Business Function</label>
+						<select data-dojo-attach-point="busnsFunctn_formSearch" data-dojo-type="dojox/form/CheckedMultiSelect"
+							   data-dojo-props="dropDown: true, multiple: true, required: false" value:" "></select>
+						
+					</div>
+					<div class="l_column_thirds">
+						
+						<label for="classftnsTxtArea_formSearch">Classification</label>
+						<textarea data-dojo-attach-point="classftnsTxtArea_formSearch" name="classfctntextarea3" data-dojo-type="dijit/form/SimpleTextarea" rows="4" cols="35" style="width:300px;" 
+							data-dojo-props="trim:true, propercase:true, readOnly:true">
+						</textarea> <br>
+						
+						<button data-dojo-attach-point="editClassftnBtn_formSearch" type="button" data-dojo-type="dijit/form/Button">Edit</button>
+						<div data-dojo-attach-point="subClassTitlePane_formSearch" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Sub-Classification',open:false" style ="width:350px;">
+							<select data-dojo-attach-point="subclassfnCd_formSearch" data-dojo-type = "dojox/form/CheckedMultiSelect"  
+								data-dojo-props="multiple: true, required: false" value: "" size="8" style="width:300px;"></select>
+							<br>
+							<button data-dojo-attach-point="deselectAllBtn_formSearch" type="button" data-dojo-type="dijit/form/Button">Deselect All</button>  
+							<button data-dojo-attach-point="subClsFullScreenBtn_formSearch" type="button" data-dojo-type="dijit/form/Button">Full Screen</button>
+						</div>
+						
+					</div>
+				   
+				</div>
+			
+			</div>	
+		
+		</form>
+        <button data-dojo-attach-point="formBtnSearch_formSearch" type="submit" data-dojo-type="dijit/form/Button">Search</button>
+		<button data-dojo-attach-point="formBtnClear_formSearch" type="button" data-dojo-type="dijit/form/Button">Clear</button>
+    
+    
+    
+    <!-- Pop Ups -->
+    
+    
+    
+    <!-- Issue State dialog -->
+		<div data-dojo-type="dijit.Dialog" style="display:none;" data-dojo-attach-point="stateDialogId_formsearch" name="stateDialog" data-dojo-props="title:'Edit States'">
+			<div class="l_row">
+				<div class ="l_column_thirds">
+					<label for="exStsCMSelect_formsearch">Excluded</label><br>
+					<select data-dojo-attach-point="exStsCMSelect_formsearch" name="exStsCMSelect_formsearch" data-dojo-type="dojox/form/CheckedMultiSelect"
+						data-dojo-props="multiple: true, required: false" value: "" size="8" style="width:300px;"></select>
+				</div>
+				<div class ="l_column_thirds">
+					<div style="margin-left: 30px; margin-top: 200px;">
+						<span>
+							<button class="includeExcludeBtnCss" data-dojo-attach-point="btnIn_editSt_formsearch" type="button" data-dojo-type="dijit/form/Button">Include</button>
+							<button class="includeExcludeBtnCss" data-dojo-attach-point="btnEx_editSt_formsearch" type="button" data-dojo-type="dijit/form/Button">Exclude</button>
+						</span>
+						<br>
+						<span>
+							<button class="includeExcludeBtnCss" data-dojo-attach-point="btnInAll_editSt_formsearch" type="button" data-dojo-type="dijit/form/Button">Include All</button>
+							<button class="includeExcludeBtnCss" data-dojo-attach-point="btnExAll_editSt_formsearch" type="button" data-dojo-type="dijit/form/Button">Exclude All</button>
+						</span>
+					</div>
+					
+				</div>
+				<div class ="l_column_thirds">
+						
+					<label for="inStCMSelect_formsearch">Included</label><br>
+					<select data-dojo-attach-point="inStCMSelect_formsearch" name="inStCMSelect_formsearch" data-dojo-type="dojox/form/CheckedMultiSelect"
+						data-dojo-props="multiple: true, required: false" value: "" size="8" style="width:300px;"></select>
+					
+				</div>
+			</div>
+			<button data-dojo-attach-point="acceptIssueStatesBtn_formsearch" type="button" data-dojo-type="dijit/form/Button">Accept</button>
+		</div>
+		<!--Residence states Dialog-->
+		
+		<div data-dojo-type="dijit.Dialog" style="display:none;" data-dojo-attach-point="resdncStateDialogId_formsearch" data-dojo-props="title:'Edit States'">
+			<div class="l_row">
+				<div class ="l_column_thirds">
+					<label for="resdncExStsCMSelect_formsearch">Excluded</label><br>
+					<select data-dojo-attach-point="resdncExStsCMSelect_formsearch" data-dojo-type="dojox/form/CheckedMultiSelect"
+						data-dojo-props="multiple: true, required: false" value: "" size="8" style="width:300px;"></select>
+				</div>
+				<div class ="l_column_thirds">
+					<div style="margin-left: 30px; margin-top: 200px;">
+						<span>
+							<button class="includeExcludeBtnCss" data-dojo-attach-point="resdncBtn_include" type="button" data-dojo-type="dijit/form/Button">Include</button>
+							<button class="includeExcludeBtnCss" data-dojo-attach-point="resdncBtn_exclude" type="button" data-dojo-type="dijit/form/Button">Exclude</button>
+						</span>
+						<br>
+						<span>
+							<button class="includeExcludeBtnCss" data-dojo-attach-point="resdncBtn_include_all" type="button" data-dojo-type="dijit/form/Button">Include All</button>
+							<button class="includeExcludeBtnCss" data-dojo-attach-point="resdncBtn_exclude_all" type="button" data-dojo-type="dijit/form/Button">Exclude All</button>
+						</span>
+					</div>
+					
+				</div>
+				<div class ="l_column_thirds">
+						
+					<label for="resdncInStCMSelect_formsearch">Included</label><br>
+					<select data-dojo-attach-point="resdncInStCMSelect_formsearch" data-dojo-type="dojox/form/CheckedMultiSelect"
+						data-dojo-props="multiple: true, required: false" value: "" size="8" style="width:300px;"></select>
+					
+				</div>
+			</div>
+			<button data-dojo-attach-point="acceptResdncStatesBtn_formsearch" type="button" data-dojo-type="dijit/form/Button">Save</button>
+		</div>
+		
+		
+		<!--Classificaiton Dialog -->
+		<div data-dojo-type="dijit.Dialog" style="display:none;" data-dojo-attach-point="classftnDialog_search" name="classftnDialog_search" data-dojo-props="title:'Edit Classifications'">
+			<div class="l_row">
+				<div class ="l_column_thirds">
+					<label for="exClsftnsCMSelect_search">Excluded</label><br>
+					<select data-dojo-attach-point="exClsftnsCMSelect_search" data-dojo-type = "dojox/form/CheckedMultiSelect"  
+						data-dojo-props="multiple: true, required: false" value: "" size="8" style="width:300px;"></select>
+				</div>
+				<div class ="l_column_thirds">
+					<div style="margin-top: 150px;">
+						<span>
+							<button class="includeExcludeBtnCss" data-dojo-attach-point="btnInclude_clsfn" type="button" data-dojo-type="dijit/form/Button">Include</button>
+							<button class="includeExcludeBtnCss" data-dojo-attach-point="btnExclude_clsfn" type="button" data-dojo-type="dijit/form/Button">Exclude</button>
+						</span>
+						<br>
+						<span>
+							<button class="includeExcludeBtnCss" data-dojo-attach-point="btnIncludeAll_clsfn" type="button" data-dojo-type="dijit/form/Button">IncludeAll</button>
+							<button class="includeExcludeBtnCss" data-dojo-attach-point="btnExcludeAll_clsfn" type="button" data-dojo-type="dijit/form/Button">ExcludeAll</button>
+						</span>
+					</div>
+				</div>
+				<div class ="l_column_thirds">
+					<label for="inClsftnsCMSelect_search">Included</label><br>
+					<select data-dojo-attach-point="inClsftnsCMSelect_search" data-dojo-type = "dojox/form/CheckedMultiSelect"  
+						data-dojo-props="multiple: true, required: false" value: "" size="8" style="width:300px;"></select>
+				</div>
+				<button data-dojo-attach-point="acceptClsftns_search" type="button" data-dojo-type="dijit/form/Button">Save</button>
+			</div>
+		</div>
+		<!-- Subclassification full screen dialog -->
+		<div data-dojo-type="dijit.Dialog"  data-dojo-attach-point="subClasftnFullScreenDialog_search" name="subClasftnFullScreenDialog_search" 
+			data-dojo-props="title:'Edit Subclassifications'">
+				<select data-dojo-attach-point="subclassfnDlg_formSearch" data-dojo-type = "dojox/form/CheckedMultiSelect"  
+					data-dojo-props="multiple: true" value: "" style = "width:480px;height:420px;"></select>
+				<div>
+					<button data-dojo-attach-point="deselectAllBtnDlg_formSearch" type="button" data-dojo-type="dijit/form/Button">DeSelect All</button>  
+					<button data-dojo-attach-point="subClsDoneScrnBtnDlg_formSearch" type="button" data-dojo-type="dijit/form/Button">Save</button>
+				</div>
+				
+		</div>
+
+</div>

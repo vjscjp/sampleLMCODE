@@ -1,0 +1,26 @@
+<div class="l_main_area">
+    
+    <h3>Add to Package</h3>
+    <form data-dojo-type="dijit/form/Form" id="form_packageAddClass">
+    <div class="l_row">
+            <label>* Classification</label>
+            <!--<div id="selClassification_packageSearch"></div>-->
+            <select id="selClassification_packageAddClass" data-dojo-type="dijit/form/FilteringSelect" ></select>
+            <span id="hide_subclass">
+            <label>Sub Classification</label>
+            <select id="selSubClassification_packageAddClass" data-dojo-type="dijit/form/FilteringSelect" ></select>
+            </span>
+            <label>Query Date Exception</label>
+            <select id="selDateException_packageAddClass" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props= "value:' ',placeHolder:'Loading..'"></select>
+        
+            <label>* Association Effective</label>
+            <input id="dateAssociationStartAdd_packageAddClass" data-dojo-id="dateAssociationStartAdd_packageAddClass" data-dojo-type="dijit/form/DateTextBox" onChange="dateAssociationEndAdd_packageAddClass.constraints.min = arguments[0];" required="true" />    
+            <label>Association Expiration</label>
+            <input id="dateAssociationEndAdd_packageAddClass" data-dojo-id="dateAssociationEndAdd_packageAddClass" data-dojo-type="dijit/form/DateTextBox" onChange="dateAssociationStartAdd_packageAddClass.constraints.max = arguments[0];" />
+            <div class="l_row_pad">
+                <button id="btnUpdateAddClass_packageAddClass" type="button" data-dojo-type="dijit/form/Button">Update</button>
+                <button id="btnCancelAddClass_packageAddClass" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+            </div>
+    </div><!--l_row-->
+    </form>
+</div>

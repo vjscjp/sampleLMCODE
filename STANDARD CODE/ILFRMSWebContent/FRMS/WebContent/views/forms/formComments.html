@@ -1,0 +1,45 @@
+<div>
+    <h3> Form Comments </h3>
+	<!-- <div id="displayErrorMsg_formComments"> </div>
+	<div id="displayInfoMsg_formComments"> </div> -->
+	<div class="l_main_area">
+		<div class="l_row">
+			<div class="l_column_thirds">
+			
+				<label for="formNum_formComments">Form Number :</label> 
+					<input type="text" id="formNum_formComments" data-dojo-type="dijit/form/TextBox" />
+				
+				<label for="revDate_formComments">Revision Date :</label>
+					<input type="text" id="revDate_formComments" data-dojo-type="dijit/form/TextBox" />
+				
+				<label for="formDesc_formComments">Form Description :</label>
+					<input type="text" id="formDesc_formComments" data-dojo-type="dijit/form/TextBox" />
+				
+			</div>
+			<div class="l_column_thirds">
+			</div>
+			<div class="l_column_thirds">
+			</div>
+			<br>
+			<div id="formCommentGridMsg_formComments"></div>
+			<br>
+			<div id = "formCommentGrid_formComments" data-dojo-type = "dojox.grid.EnhancedGrid"></div>
+			<br>
+			<button id="newCmntBtn_formComments" type="button" data-dojo-type="dijit/form/Button">New Comment</button>
+			<button id="backBtn_formComments" type="button" data-dojo-type="dijit/form/Button">Done</button>
+		</div>
+	</div>
+	<!--New comments dialog -->
+	<div data-dojo-type="dijit.Dialog"  id="newCmntDialog_formComments" name="newCmntDialog_formComments" 
+		data-dojo-props="title:'New Comments'">
+		<!-- <label for="newFormComments_formComments">Comment</label> -->
+		<textarea id="newFormComments_formComments" name="newFormComments_formComments" data-dojo-type="dijit/form/SimpleTextarea"  class="l_comment_box"
+			data-dojo-props="trim:true, propercase:true">
+		</textarea>
+		<br>
+		<button id="saveBtnCmnt_formComments" type="button" data-dojo-type="dijit/form/Button">Save</button>
+		<button id="cancelBtn_formComments" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+		
+	</div>
+	
+</div>

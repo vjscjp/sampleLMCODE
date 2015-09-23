@@ -1,0 +1,103 @@
+<div>
+    
+    <div id="frmsLayout" class="frms" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design: 'headline'">
+        <div class="l_top rounded" data-dojo-type="dijit/layout/ContentPane"
+             data-dojo-props="region: 'top'">
+            <div class="l_header">
+                <div class="l_head_title">
+                    <div class="l_head_title_in">
+                        <div class="l_logo"><img src="images/life.png"></div>
+                        <div class="l_logo_text">
+                            <div class="l_head_tag c_head_tag">Life Works</div>
+                            <div class="c_head_title">Forms Rules Management System</div>
+                        </div><!-- l_logo_text -->
+                    </div><!-- l_head_title_in -->
+                </div>
+            </div><!-- l_header -->
+            
+        </div>
+             
+        <div data-dojo-type="dijit/layout/TabContainer"
+             data-dojo-props="region: 'center', tabPosition: 'top'" 
+             data-dojo-attach-point="appTabs" id="appTabs" >
+
+		        <div data-dojo-type="dijit/layout/ContentPane"
+		             data-dojo-props="title:'Forms'" data-dojo-attach-point="FormsTab" id="FormsTab" >
+		            <div data-dojo-type="dijit/layout/BorderContainer"
+		                 data-dojo-props="design:'headline'">
+		                <div data-dojo-type="dijit/layout/ContentPane"
+		                     data-dojo-props="region:'left', splitter: true" 
+		                     id="formsNav" class="l_left_pane">
+		                </div>
+		                <div data-dojo-type="dijit/layout/ContentPane"
+		                     data-dojo-props="region:'center'" 
+		                     id="forms">
+		                </div>
+		            </div>
+		        </div>
+		            
+                <div data-dojo-type="dijit/layout/ContentPane"
+                     data-dojo-props="title:'Records'" data-dojo-attach-point="RecordsTab" id="RecordsTab" >
+		            <div data-dojo-type="dijit/layout/BorderContainer"
+		                 data-dojo-props="design:'headline'">
+		                <div data-dojo-type="dijit/layout/ContentPane"
+		                     data-dojo-props="region:'left', splitter: true" 
+		                     id="recordsNav" class="l_left_pane">
+		                </div>
+		                <div data-dojo-type="dijit/layout/ContentPane"
+		                     data-dojo-props="region:'center'" 
+		                     id="records">
+		                </div>
+		            </div>
+		        </div>
+            
+                <div data-dojo-type="dijit/layout/ContentPane"
+                     data-dojo-props="title:'Packages'"  data-dojo-attach-point="PackagesTab" id="PackagesTab" >
+                    <div data-dojo-type="dijit/layout/BorderContainer"
+                         data-dojo-props="design:'headline'">
+                        <div data-dojo-type="dijit/layout/ContentPane"
+                             data-dojo-props="region:'left', splitter: true" 
+                             id="packagesNav" class="l_left_pane">
+                        </div>
+                        <div data-dojo-type="dijit/layout/ContentPane"
+                             data-dojo-props="region:'center'" 
+                             id="packages">
+                        </div>
+                    </div>
+                </div>
+            
+                <div data-dojo-type="dijit/layout/ContentPane"
+                     data-dojo-props="title:'Promotion'" data-dojo-attach-point="PromotionTab" id="PromotionTab" >
+                    <div data-dojo-type="dijit/layout/BorderContainer"
+                         data-dojo-props="design:'headline'">
+                        <div data-dojo-type="dijit/layout/ContentPane"
+                             data-dojo-props="region:'left', splitter: true" 
+                             id="promotionNav" class="l_left_pane">
+                        </div>
+                        <div data-dojo-type="dijit/layout/ContentPane"
+                             data-dojo-props="region:'center'" 
+                             id="promotion">
+                        </div>
+                    </div>
+                </div>
+            
+                <div data-dojo-type="dijit/layout/ContentPane"
+                     data-dojo-props="title:'Users'" data-dojo-attach-point="UsersTab" id="UsersTab" >
+                    <div data-dojo-type="dijit/layout/BorderContainer"
+                         data-dojo-props="design:'headline'">
+                        <div data-dojo-type="dijit/layout/ContentPane"
+                             data-dojo-props="region:'left', splitter: true" 
+                             id="usersNav" class="l_left_pane">
+                        </div>
+                        <div data-dojo-type="dijit/layout/ContentPane"
+                             data-dojo-props="region:'center'" 
+                             id="users">
+                        </div>
+                    </div>
+                </div>
+            </div>     
+    </div>
+    
+    <div id="notice_holder"></div>
+</div>
+    

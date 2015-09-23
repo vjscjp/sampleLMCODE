@@ -1,0 +1,139 @@
+// ---- Notices ---- //
+.notice_item{
+    position:absolute;
+    left: 50%;
+    top:125px;
+    width: 460px;
+    
+    border: 2px solid $base-blue;
+    border-top:0;
+	margin: 10px 0px 10px -50px; // 10px -240px;
+	padding:7px 20px; 
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    
+}
+
+.notice_wrapper{
+    height: 0px;
+    overflow: hidden;
+}
+
+%notice_text{
+    color: $base-blue;
+    .fa {
+        position: absolute;
+        top: 9px;
+        right: 5px;
+        cursor: pointer;
+        color: $base-text;
+    }
+}
+
+.notice_pop_info{
+    @extend %notice_text;
+    background-color: lighten($base-blue,40%);
+    border-color: $base-blue;
+    color: $base-blue;
+}
+
+.notice_pop_success {
+	@extend %notice_text;
+    background-color: lighten($base-green,40%);
+    border-color: $base-green;
+    color: $base-green;
+}
+.notice_pop_warning {
+	@extend %notice_text;
+    background-color: lighten($base-orange,40%);
+    border-color: $base-orange;
+    color: $base-orange;
+}
+.notice_pop_error {
+	@extend %notice_text;
+    background-color: lighten($base-red,40%);
+    border-color: $base-red;
+    color: $base-red;
+}
+// Form Vlidation Styles
+
+.notice_error{
+    color: $base-red;
+    font-weight: bold;
+}
+
+// -- Loading screen -- //
+.notices_loading_out{
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0,0.60);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.notices_loading_in{
+    position: fixed;
+    top:40%;
+    left: 50%;
+    width: 120px;
+    color: $base-blue;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid $base-blue;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.95);
+    padding: 20px 0;
+    margin-left: -60px;
+}
+
+// -- Dialog pop up -- //
+
+%dialog_box{
+    .dijitDialogTitle{
+        font-weight: Bold;
+    }
+    .dijitDialogPaneActionBar{
+        padding: 0 5px 5px 5px;   
+    }
+}
+
+.dialog_info{
+    @extend %dialog_box;
+    .fa{
+        color: $base-green;
+    }
+}
+
+.dialog_success {
+	@extend %dialog_box;
+    .fa{
+        color: $base-green;
+    }
+}
+.dialog_warning {
+	@extend %dialog_box;
+    .fa{
+        color: $base-orange;
+    }
+}
+.dialog_error {
+	@extend %dialog_box;
+    .fa{
+        color: $base-red;
+    }
+}
+
+
+// Dojo overides
+.dijitDialogPaneActionBar{
+    text-align: center;
+    padding-bottom: 7px;
+}
+
+.dialog_hide_cancel .dijitDialogPaneActionBar{
+    span:nth-child(2){
+        display: none;
+        visibility: hidden;
+    }
+}

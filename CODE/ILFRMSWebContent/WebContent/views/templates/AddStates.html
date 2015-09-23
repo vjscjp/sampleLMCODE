@@ -1,0 +1,32 @@
+<div data-dojo-type="dijit.Dialog" style="display:none;" data-dojo-props="title:'Edit States'">
+	<div class="l_row">
+		<div class ="l_column_thirds">
+			<label for="exStsCMSelect_formsearch">Excluded</label><br>
+			<select id="exStsCMSelect_formsearch" name="exStsCMSelect_formsearch" data-dojo-type="dojox/form/CheckedMultiSelect"
+				data-dojo-props="multiple: true, required: false" value: "" size="8" style="width:300px;"
+				data-dojo-attach-event="click:selectExcludedSts"></select>
+		</div>
+		<div class ="l_column_thirds">
+			<div style="margin-left: 30px; margin-top: 200px;">
+				<span>
+					<button data-dojo-attach-event="click: include_states" type="button" data-dojo-type="dijit/form/Button">Include</button>
+					<button data-dojo-attach-eventid="click: exclude_states" type="button" data-dojo-type="dijit/form/Button">Exclude</button>
+				</span>
+				<br>
+				<span>
+					<button data-dojo-attach-event="click: include_all_states" type="button" data-dojo-type="dijit/form/Button">Include All</button>
+					<button data-dojo-attach-event="click: exclude_all_states" type="button" data-dojo-type="dijit/form/Button">Exclude All</button>
+				</span>
+			</div>
+			
+		</div>
+		<div class ="l_column_thirds">
+			<label for="inStCMSelect_formsearch">Included</label><br>
+			<select id="inStCMSelect_formsearch" name="inStCMSelect_formsearch" data-dojo-type="dojox/form/CheckedMultiSelect"
+				data-dojo-props="multiple: true, required: false" value: "" size="8" style="width:300px;"
+				data-dojo-attach-event="click:selectIncludedSts"></select>
+			
+		</div>
+	</div>
+	<button data-dojo-attach-event="click:acceptStates" type="button" data-dojo-type="dijit/form/Button">Accept</button>
+</div>

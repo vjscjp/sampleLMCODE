@@ -1,0 +1,90 @@
+// *************************************
+//
+//   Content
+//   -> Typography
+//
+// *************************************
+
+// -------------------------------------
+//   Headings
+// -------------------------------------
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $base-fontHeader;
+  font-weight: bold;
+  margin:7px 0;
+}
+
+h1, .c-h1, %c-h1{
+  font-size: rem(40px);
+  line-height: rem(44px);
+}
+h2, .c-h2, %c-h2{
+  font-size: rem(34px);
+  line-height: rem(36px);
+}
+h3, .c-h3, %c-h3{
+  font-size: rem(30px);
+  line-height: rem(32px);
+}
+h4, .c-h4, %c-h4{
+  font-size: rem(24px);
+  line-height: rem(26px);
+}
+h5, .c-h5, %c-h5{
+  font-size: rem(20px);
+  line-height: rem(22px);
+}
+h6, .c-h6, %c-h6{
+  font-size: rem(16px);
+  line-height: rem(18px);
+}
+
+// -------------------------------------
+//   Utilities
+// -------------------------------------
+
+%c-center, .c-center{
+  text-align: center;
+}
+
+%c-condense, .c-condense{
+  font-size: 85%;
+}
+
+%c-lead, .c-lead{
+  font-size: 125%;
+}
+
+%c-shout, .c-shout{
+  text-transform: uppercase;
+}
+
+// -------------------------------------
+//   General
+// -------------------------------------
+
+
+// -------------------------------------
+//   App, main, header, and footers
+// -------------------------------------
+
+.c_head_tag{
+	font-family: $base-fontHeader;
+	color:$base-white;
+	font-size: 30px;
+	line-height: 32px;
+}
+.c_head_title{
+	font-family: $base-fontHeader;
+	color:$base-white;
+	font-size: 38px;
+	line-height: 38px;
+}
+.c_head_tab{
+	font-size: 17px;
+	line-height: 20px;
+	color:$base-corp-blue;
+}
+
+
