@@ -1,0 +1,128 @@
+<div class="l_main_area">
+	<h3>View/Modify Record</h3>
+	<div id="displayErrorMsg_recordsViewModify"> </div>
+	<div id="displayInfoMsg_recordsViewModify"> </div>
+	<form id="modifyForm_recordsViewModify" data-dojo-type="dijit/form/Form">
+	<!-- <div class="l_row_pad l_as_table"> -->
+
+	<div data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Search'">
+     <div>
+     <label for="searctTxtRecordNumber">* Record #
+                <input type="text" id="searctTxtRecordNumber_recordsViewModify" name="searchRecordNumber" data-dojo-type="dijit/form/ValidationTextBox" 
+                    data-dojo-props="maxlength:100,required:true" />
+                    
+      <button id="searchBtn_recordsViewModify" type="button" data-dojo-type="dijit/form/Button">Search</button></label>            
+     </div>
+     </div>
+	<br>
+	
+	
+	
+	<div class="l_row_pad">
+		<!-- <div class="l_column_thirds l_as_table_cell"> -->
+		<div data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Record'">
+		<div class="l_column_thirds">
+		    <!-- <div class="l_rounded_border_column"> -->
+		         <label for="txtRecordNumber">* Record #</label>
+				<input type="text" id="txtRecordNumber_recordsViewModify" name="recordNumber" data-dojo-props="maxlength:100,required:true" 
+					data-dojo-type="dijit/form/ValidationTextBox"/>
+					
+					<label for="txtRecordTitle_recordsCreate">Record Title</label>
+				<input type="text" id="txtRecordTitle_recordsViewModify" name="recordTitle" data-dojo-props="maxlength:100" 
+					data-dojo-type="dijit/form/ValidationTextBox"/>
+					
+					<label for="ddlRecordSource_recordsCreate">* Record Source</label>
+			    <select id="ddlRecordSource_recordsViewModify" data-dojo-type="dijit/form/Select" 
+			       data-dojo-props="value: '',required:true" name="recordSource">
+			       <option value="0">Internal</option>
+			       <option value="1">External</option>
+			    </select>
+		    
+			     <label for="ddlClass">* Classification</label>
+			    <select id="ddlClass_recordsViewModify" data-dojo-type="dijit/form/FilteringSelect"  style="width: 200px;" 
+			    	value: "" name="classtnCd">
+			    </select>
+			    
+			     <label for="ddlSubClass">* Sub-Classification</label>
+			    <select id="ddlSubClass_recordsViewModify" data-dojo-type="dijit/form/FilteringSelect"  style="width: 200px;" 
+			    	value: "" name="subclassificationCd">
+			    </select>
+			    
+			
+			    <label for="effectiveDate">* Effective Date</label>
+			    <input type="text" id="effectiveDate_recordsViewModify"  data-dojo-props="required:true" data-dojo-type="dijit/form/DateTextBox"/>
+			    
+			    <label for="expirationDate">Expiration Date</label>
+			    <input type="text" id="expirationDate_recordsViewModify" data-dojo-type="dijit/form/DateTextBox"/>
+	    	<!-- </div> -->
+	    	
+		</div>
+		
+		<!-- <div class="l_column_thirds l_as_table_cell"> -->
+		<div class="l_column_thirds">
+		    <!-- <div class="l_rounded_border_column"> -->
+		        <label for="ddlNPPI">* NPPI/PCI Designation</label>
+                <select id="ddlNPPI_recordsViewModify" data-dojo-type="dojox/form/CheckedMultiSelect"
+							   data-dojo-props="dropDown: true, multiple: true, required: true, sortByLabel:false"  name="nppiPciDesignations">
+							</select>
+	
+		        <label for="ddlTimingCode">Timing Code</label>
+			    <select id="ddlTimingCode_recordsViewModify" data-dojo-type="dojox/form/CheckedMultiSelect" 
+								data-dojo-props="dropDown: true, multiple: true, required: false" name="timingCds">
+			    </select>
+			    
+				
+				<label for="txtLunarDocType">Lunar Doc Type</label>
+			    <select id="txtLunarDocType_recordsViewModify" data-dojo-type="dojox/form/CheckedMultiSelect" 
+								data-dojo-props="dropDown: true, multiple: true, required: false" name="lunarDocTypeNm">
+			    </select>
+					
+			   
+				
+				<label for="RIC_recordsViewModify">RIC</label>
+				<input type="text" id="RIC_recordsViewModify" name="RIC_recordsCreate" data-dojo-props="maxlength:100,required:true" 
+					data-dojo-type="dijit/form/TextBox"/>
+					
+					<br><br>
+					
+					<input type="modifyRecordMarkPromo" id="modifyRecordMarkPromo" checked data-dojo-type="dijit/form/CheckBox">Mark For Promotion</input>
+				
+	    	<!-- </div> -->
+		</div>
+	</div>
+	</div>
+	
+	<!--Duplicate dialog -->
+        <!--Not used anymore !!-->
+	<!--<div data-dojo-type="dijit.Dialog" style="display:none;" id="confirm_recordsCreate" name="confirm_recordsCreate" >
+		<h3>Duplicate Record</h3>
+    <div class="l_rounded_border_column">
+	    <div id="duplicatConfirmation" class="l_row_pad">
+	        <label><b>This is a duplicate entry. Please update
+	        <br> your document record values </b></label>
+	        <label><b>Classification:</b> <label for="classification" id="clas_duplicateRecordConfirmation"></label></label>
+	        <label><b>subClassfication:</b> <label for="subClassfication" id="sClas_duplicateRecordConfirmation"></label></label>
+	       	<label><b>Record #:</b> <label for="recordid" id="recId_duplicateRecordConfirmation"></label></label>
+	        <label><b>Record Title:</b> <label for="recordTitle" id="recTit_duplicateRecordConfirmation"></label></label>
+	   </div>
+	   <div class="l_row_pad">
+	        <table>
+	            <tr>
+	                <td>
+	                    <button id="modify_duplicateRec" data-dojo-type="dijit/form/Button" type="button" >Modify Existing</button>
+	                    <button id="cancel_duplicateRec" data-dojo-type="dijit/form/Button" type="button" >Cancel</button>
+	                </td>
+	            </tr>
+	        </table>
+	    </div>
+    </div>
+	
+	</div>-->
+        </form>	
+        <div class="l_row_pad">
+            <button id="commentsBtn_recordsViewModify" type="button" data-dojo-type="dijit/form/Button">Comments</button>
+            <button id="saveBtn_recordsViewModify" type="button" data-dojo-type="dijit/form/Button">Save</button>
+			<button id="cancelBtn_recordsViewModify" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+        </div>
+       
+</div>

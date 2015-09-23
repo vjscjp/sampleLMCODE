@@ -1,0 +1,308 @@
+// *************************************
+//
+//   Layout
+//   -> Margin, Padding, Sizing
+//
+// *************************************
+
+// -------------------------------------
+//   Grids and Layouts
+// -------------------------------------
+
+
+
+
+
+// -------------------------------------
+//   Utilities
+// -------------------------------------
+
+%l_pull_right, .l_pull_right{
+	text-align:right;
+}
+
+%l-block, .l-block{
+  display: block
+}
+
+%l-condense, .l-condense{
+  margin-bottom: rem($base-whitespace / 2);
+}
+%l-pullLeft, .l-pullLeft{
+  float: left;
+}
+
+%l-space, .l-space{
+  margin-bottom: rem($base-whitespace);
+}
+%l-xspace, .l-xspace{
+  margin-bottom: rem($base-whitespace * 2);
+}
+
+.l_hidden{
+    display: none;
+    visibility: hidden;
+}
+
+// -------------------------------------
+//   Standard float items
+// -------------------------------------
+%column_shared{
+	padding:0px 0 0px 0;
+}
+
+.l_column_fourths	{
+	@extend .flt;
+	@extend %column_shared;
+	width:33%;
+}
+.l_column_thirds	{
+	@extend .flt;
+	@extend %column_shared;
+	width:33%;
+}
+.l_column_half	{
+	@extend .flt;
+	@extend %column_shared;
+	width:50%;
+} 
+.l_column	{
+	@extend %column_shared;
+	width:100%;
+} 
+
+// form specific floats and wraps.
+.l_row {
+    label{
+        padding: 10px 0 2px 0;
+    }
+}
+.l_row_pad{
+    @extend .l_row;
+    padding: 16px 0 4px 0;
+}
+
+.l_pad{
+    padding: 16px 0 16px 0;
+}
+.l_pad_top{
+    padding: 16px 0 4px 0;
+}
+.l_pad_btm{
+    padding: 4px 0 16px 0;
+}
+
+// All dojo base themes are 240px
+.l_input_float {
+	@extend .flt;
+	width:280px;
+}
+.l_select{
+	width:240px;
+}
+
+.l_rounded_border {
+	border-color: #cdcdcd;
+	border-width: 1px;
+	border-style: solid;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;	
+    padding: 7px;
+}
+.l_rounded_border_column{
+    @extend .l_rounded_border;
+    margin-right: 10px;
+    height: 100%;
+}
+
+.l_as_table{
+    display: table !important;
+}
+.l_as_table_cell{
+    display: table-cell !important;
+}
+
+// -------------------------------------
+// Specific  App Wrapper, header and footer
+// -------------------------------------
+
+.l_main_out{
+	padding:0 0px 30px 0px;
+	text-align:center;
+}
+.l_main{
+	box-shadow:0px 4px 35px 0px rgba(50, 50, 50, 0.50);
+	margin:0 auto;
+	text-align:left;
+	width:1045px;
+}
+.l_content{
+	padding:15px 20px;
+	min-height:300px;
+	background:$base-white;
+}
+
+.l_form{
+	padding:15px 0 0 0;
+}
+
+.dijitSplitter {
+    z-index: 1;
+}
+    
+.l_full_screen{ 
+    position: fixed; 
+    top: 122px;
+    left: 0px;
+    border: 10px solid rgba(50,50,50,0.70);
+    border-radius: 7px;
+    background: #FFF;
+    padding: 10px 15px;
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 400;
+}
+
+.l_pop_up{ 
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    border: 1px solid rgba(50,50,50,0.70);
+    border-radius: 7px;
+    background: #FFF;
+    padding: 10px 15px;
+    display: none;
+    width: 220px;
+            height: 140px;
+    z-index: 405;
+    .l_pop_up_content{
+        position: relative;
+
+        .l_pop_up_btn{
+            border: none;
+            background: none;
+            text-indent: -9999px;
+            padding:0px; 
+            margin:0px;
+            background:url(../images/close.png) no-repeat #FFF;
+            width: 26px;
+            height: 26px;
+            right: -28px;
+            top:-18px;
+            position: absolute;
+            display: block;
+            cursor: pointer;
+            
+        }
+    }
+}
+
+
+// standard styling for headings, headings can be a h2 and a button on 2 floats, or just an h2
+.heading_section {
+	padding: 20px 0 2px 0;
+	h2 {
+		padding:0;
+		margin:0;
+	}
+	button, .dijitButton{
+		margin-top:4px;
+	}
+}
+
+#loadingOverlay {
+	@extend .flt;
+	width:25px; 
+	height:20px;
+    background:  #fff url('//ajax.googleapis.com/ajax/libs/dojo/1.9.2/dijit/themes/claro/images/loadingAnimation.gif') no-repeat 0px 0px;
+}
+
+// ---- Header ---- //
+.l_top{
+    background:lighten($base-corp-blue, 50%);
+}
+.l_header{
+    background:lighten($base-corp-blue, 50%);
+}
+
+.l_head_title{
+	@extend .flt;
+	width:70%;
+	height:75px;
+	
+	.l_head_title_in{
+		padding-left:15px;
+		.l_logo{
+			@extend .flt;
+			width:75px;
+			padding:5px 0 0 0;
+		}
+		.l_logo_text{
+			@extend .flt;
+			width:505px;
+			padding:3px 0 0 0;
+			.l_head_tag{
+				border-bottom:1px solid lighten($base-white, 75%);
+			}
+		}
+	}
+}
+
+
+// ---- App ---- //
+.l_left_nav{
+    min-width: 150px; 
+    @extend %padding;
+}
+.l_main_area{
+    min-width: 1060px;   
+    @extend %padding;
+}
+
+.l_left_nav{
+    ul{
+        padding: 0 0 0 0;
+		li{
+			list-style: none;
+            padding: 5px 0 5px 5px;
+            button{
+                text-decoration: none;
+                text-align:left;
+                i{
+                    margin:0 7px 0 0px;
+                    color: #444;
+                    font-size: 14px;
+                }
+                b{
+                    font-weight: normal;
+                    @extend .flt;
+                    width: 123px;
+                }
+            }
+		}
+	}   
+}
+
+.l_left_pane {    
+    background: #CCC url(../images/bkg.jpg) repeat-x -200px 0px  !important;
+	width: 170px; // must change .l_left_nav ul li button b
+	min-width:150px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+} 
+
+// -- Dojo override --//
+.dojoxCheckedMultiSelectMenu{
+    max-height: 400px;   
+}
+
+// -- Rogue elements -- //
+
+.l_comment_box{
+    width: 265px; 
+    height: 110px !important;
+}

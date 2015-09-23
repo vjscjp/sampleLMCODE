@@ -1,0 +1,33 @@
+<div class="l_main_area">
+    <h3>Add to Package</h3>
+    <div class="l_row_pad">
+        <div id="packageRecordSearch_packageAddRecord"></div>
+    </div>
+    <div class="l_row_pad">
+        <div id="packageRecordGrid_packageAddRecord"></div>
+    </div>
+
+    <form data-dojo-type="dijit/form/Form" id="form_packageAddRecord">
+    <div class="l_row_pad">
+        <div class="l_column_thirds">
+            <label for="selDateException_packageAddRecord">Query Date Exception</label>
+            <select id="selDateException_packageAddRecord" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props= "value:' ', required:false, placeHolder:'Loading..'"></select>
+
+        </div><!--l_column_thirds-->
+        <div class="l_column_thirds">
+            <label for="dateEffective_packageAddRecord">* Association Effective</label>
+            <input id="dateEffective_packageAddRecord" data-dojo-id="dateEffective_packageAddRecord" data-dojo-type="dijit/form/DateTextBox" onChange="dateExpiration_packageAddRecord.constraints.min = arguments[0];" required="true" />
+        </div><!--l_column_thirds-->
+        <div class="l_column_thirds">
+            <label for="dateExpiration_packageAddRecord">Association Expiration</label>
+            <input id="dateExpiration_packageAddRecord" data-dojo-id="dateExpiration_packageAddRecord" data-dojo-type="dijit/form/DateTextBox" onChange="dateEffective_packageAddRecord.constraints.max = arguments[0];" />
+        </div><!--l_column_thirds-->
+    </div><!--l_row_pad-->
+
+    <div class="l_row_pad">
+    	<button id="btnUpdate_packageAddRecord" type="button" data-dojo-type="dijit/form/Button">Update</button>
+        <button id="btnCancel_packageAddRecord" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+        <button id="btnFullScreen_packageAddRecord" type="button" data-dojo-type="dijit/form/Button">Full Screen</button>
+    </div>
+    </form>
+</div>

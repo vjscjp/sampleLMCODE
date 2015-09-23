@@ -1,0 +1,54 @@
+// ---- App ---- //
+.l_left_nav{
+    min-width: 150px; 
+    @extend %padding;
+}
+.l_main_area{
+    min-width: 1060px;   
+    @extend %padding;
+}
+
+.l_left_nav{
+    ul{
+        padding: 0 0 0 0;
+		li{
+			list-style: none;
+            padding: 5px 0 5px 5px;
+            button{
+                text-decoration: none;
+                text-align:left;
+                i{
+                    margin:0 7px 0 0px;
+                    color: #444;
+                    font-size: 14px;
+                }
+                b{
+                    font-weight: normal;
+                    @extend .flt;
+                    width: 123px;
+                }
+            }
+		}
+	}   
+}
+
+.l_left_pane {    
+    background: #CCC url(../images/bkg.jpg) repeat-x -200px 0px  !important;
+	width: 170px; // must change .l_left_nav ul li button b
+	min-width:150px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+} 
+
+// -- Dojo override --//
+.dojoxCheckedMultiSelectMenu{
+    max-height: 400px;   
+}
+
+// -- Rogue elements -- //
+
+.l_comment_box{
+    width: 265px; 
+    height: 110px !important;
+}

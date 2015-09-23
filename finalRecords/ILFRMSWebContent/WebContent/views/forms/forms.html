@@ -1,0 +1,139 @@
+<div id="form_view">
+    <div id = "formDetails" class="l_main_area">
+		<h4><div data-dojo-attach-point="viewTitle"></div></h4>
+		<div data-dojo-attach-point="formsSearchContainer"></div>
+		<form id="documentForm" name="documentForm" data-dojo-attach-point="documentForm" data-dojo-type="dijit/form/Form" enctype="multipart/form-data" action="" method="">
+            <!--Form Components -->
+			<div id= "documentForm_title" data-dojo-type="dijit/TitlePane" data-dojo-props="title: 'Form'">
+				<div class="l_row">
+					<div class="l_column_thirds"> 
+						<label for="frmRecNum">*Form Number</label>
+						<input type="text" name="frmRecNum" data-dojo-attach-point="frmRecNum"  data-dojo-type="dijit/form/ValidationTextBox" />
+					</div>
+					<div class="l_column_thirds">
+						<label for="classtnCd">Classification</label>
+						<select id="classtnCd" name="classtnCd" data-dojo-attach-point="classtnCd" data-dojo-type="dijit/form/FilteringSelect"></select>
+					</div>
+					<div class="l_column_thirds">
+						<label for="docTitl">Form Title</label>
+						<input type="text" name="docTitl" data-dojo-attach-point="docTitl" data-dojo-type="dijit/form/ValidationTextBox" />
+					</div>
+				</div>
+				
+				<div class="l_row">
+					<div class="l_column_thirds"> 
+						<label for="frmRvnDt">Revision Date</label>
+						<input type="text" name="frmRvnDt"  data-dojo-attach-point="frmRvnDt"  data-dojo-type="dijit/form/ValidationTextBox" />
+						<label for="docDesc">Form Description</label>
+						<textarea type="text" name="docDesc"  data-dojo-attach-point="docDesc" data-dojo-type="common/widgets/ValidationTextArea" ></textarea>
+					</div>
+					<div class="l_column_thirds">
+						<label for="subclasstnCd">*Sub-Classification</label>
+						<select  name="subclasstnCd" data-dojo-attach-point="subclasstnCd" data-dojo-type="dijit/form/FilteringSelect"></select>
+						<label for="frmTypeCd">*Form Type</label>
+						<select  name="frmTypeCd" data-dojo-attach-point="frmTypeCd" data-dojo-type="dijit/form/FilteringSelect"></select>
+						<label for="busFncCd">Business Function</label>
+						<select  name="busFncCd" data-dojo-attach-point="busFncCd" data-dojo-type="dijit/form/FilteringSelect"></select>
+					</div>
+					<div class="l_column_thirds">
+						<label for="docUsageInu">Form Usage/ Instruction</label>
+						<textarea type="text" name="docUsageInu"  data-dojo-attach-point="docUsageInu" data-dojo-type="dijit/form/Textarea"></textarea>
+						<label for="lunarDocTypeCd">Lunar Doc Type</label>
+						<select  name="lunarDocTypeCd" data-dojo-attach-point="lunarDocTypeCd" data-dojo-type="dijit/form/FilteringSelect"></select>
+					</div>
+				</div>
+				
+				<div class="l_row">
+					<div class="l_column_thirds"> 
+						<label for="secLvlCd">NPPI/PCI Designation</label>
+						<select name="secLvlCd" data-dojo-attach-point="secLvlCd" data-dojo-type="dijit/form/FilteringSelect"></select>
+					</div>
+					<div class="l_column_thirds">
+						<div>
+							<div class ="l_column_thirds">
+								<label for="logoInd">Logo</label>
+								<label class="alignleft" for="logoIndYes"><input type="radio" data-dojo-type="dijit/form/RadioButton" value='YES' name="logoInd"  data-dojo-attach-point="logoInd" /> Yes </label> 
+								<label class="alignleft" for="logoIndNo"><input type="radio" data-dojo-type="dijit/form/RadioButton" value='NO' name="logoInd"  /> No </label>
+							</div>
+							<div class ="l_column_thirds">
+								<label for="trnslInd">Transitional</label>
+								<label class="alignleft" for="trnslIndYes"><input type="radio" data-dojo-type="dijit/form/RadioButton" name="trnslInd"  data-dojo-attach-point="trnslInd" /> Yes </label> 
+								<label class="alignleft" for="trnslIndNo"><input type="radio" data-dojo-type="dijit/form/RadioButton" name="trnslInd"  /> No </label>
+							</div>
+							<div class ="l_column_thirds"></div>
+						</div>
+					</div>
+					<div class="l_column_thirds">
+						<label for="timingReqrmntCd">Timing Requirement</label>
+						<select name="timingReqrmntCd" data-dojo-attach-point="timingReqrmntCd" data-dojo-type="dijit/form/FilteringSelect"></select>
+					</div>
+				</div>
+				
+				<div class="l_row">
+					<div class="l_column_thirds"> 
+						<label for="cntntTypeCd">Form Content Type</label>
+						<select name="cntntTypeCd" data-dojo-attach-point="cntntTypeCd" data-dojo-type="dijit/form/FilteringSelect"></select>
+					</div>
+					<div class="l_column_thirds">
+						<div>
+							<div class ="l_column_thirds">
+								<label for="ofeSigInd">Officer Signature</label>
+								<label class="alignleft" for="ofeSigIndYes"><input type="radio" data-dojo-type="dijit/form/RadioButton" value='YES' name="ofeSigInd" data-dojo-attach-point="ofeSigInd" /> Yes </label> 
+								<label class="alignleft" for="ofeSigIndNo"><input type="radio" data-dojo-type="dijit/form/RadioButton" value='NO' name="ofeSigInd" /> No </label>
+							</div>
+							<div class ="l_column_thirds">
+								<label for="rtrnToHomeOffcInd">Return to Home Office</label>
+								<label class="alignleft" for="rtrnToHomeOffcIndYes"><input type="radio" data-dojo-type="dijit/form/RadioButton" name="rtrnToHomeOffcInd"  data-dojo-attach-point="rtrnToHomeOffcInd"  /> Yes </label> 
+								<label class="alignleft" for="rtrnToHomeOffcIndNo"><input type="radio" data-dojo-type="dijit/form/RadioButton" name="rtrnToHomeOffcInd"  /> No </label>
+							</div>
+							<div class ="l_column_thirds"></div>
+						</div>
+					</div>
+					<div class="l_column_thirds">
+						<label for="formTimCd">Timing Code</label>
+						<select name="formTimCd" data-dojo-attach-point="formTimCd" data-dojo-type="dijit/form/FilteringSelect"></select>
+					</div>
+				</div>
+				
+				<div class="l_row">
+					<div class="l_column_thirds"> 
+						<label for="promoImplnDt">Promotion Implementation Date</label>
+						<select name="promoImplnDt" data-dojo-attach-point="promoImplnDt" data-dojo-type="dijit/form/DateTextBox"></select>
+					</div>
+					<div class="l_column_thirds">
+						<label for="docGntImplnDt">Documaker Implementation Date</label>
+						<select name="docGntImplnDt" data-dojo-attach-point="docGntImplnDt" data-dojo-type="dijit/form/DateTextBox"></select>
+					</div>
+					<div class="l_column_thirds">
+						<label for="cmntTxt">Comment</label>
+						<textarea type="text" name="cmntTxt" data-dojo-attach-point="cmntTxt" data-dojo-type="dijit/form/Textarea"></textarea>
+					</div>
+				</div>
+				
+				<div class="l_row">
+					<div class="l_column_thirds"> 
+						<label for="docFrmUseDt">Form Use Date</label>
+						<select id="docFrmUseDt" name="docFrmUseDt" data-dojo-attach-point="docFrmUseDt" data-dojo-type="dijit/form/DateTextBox"></select>
+					</div>
+					<div class="l_column_thirds">
+						<div class='l_pad'>
+							<input class="alignleft,l_pad_top" type="checkbox" data-dojo-type="dijit/form/CheckBox" name="promoInd" id="promoInd" data-dojo-attach-point="promoInd"> <span style='padding-left:10px'>Mark For Promotion</span></input>
+						</div>					
+					</div>
+					<div class="l_column_thirds">
+						<label for="extlRecInd">RIC</label>
+						<input type="text" name="extlRecInd" id="extlRecInd" data-dojo-attach-point="extlRecInd"  data-dojo-type="dijit/form/ValidationTextBox" />
+					</div>
+				</div>
+				
+			 </div>
+        </form>
+		<div class="l_row_pad">
+		  <button label='Promotion Validation' data-dojo-attach-point="validateForm_btn" type="button" data-dojo-type="dijit/form/Button"></button>
+		  <button label='Save' data-dojo-attach-point="saveForm_btn" type="button" data-dojo-type="dijit/form/Button"></button>
+		  <button label='Cancel' data-dojo-attach-point="cancelForm_btn" type="button" data-dojo-type="dijit/form/Button"></button>
+		</div>
+    </div>
+	
+</div>
+

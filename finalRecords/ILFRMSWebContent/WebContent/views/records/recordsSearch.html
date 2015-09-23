@@ -1,0 +1,33 @@
+<div class="l_main_area">
+    <h3>Record Search</h3>
+	<!-- <div id="displayErrorMsg_recordsSearch"> </div>
+	<div id="displayInfoMsg_recordsSearch"> </div> -->
+    <div class="l_row">
+        <div class="l_rounded_border_column">
+            <div id="recordSearchDiv"></div>
+            
+        </div><!--l_rounded_border_column-->
+    </div><!--l_row-->
+    <div class="l_row_pad">
+        <h3>Record Search Results</h3>
+			<div id="grid_recordsSearch"  dojoType="dojox.grid.EnhancedGrid" data-dojo-props="plugins:{ exporter: true}" style="height:200px;" ></div>
+			<div>
+            <div class="l_row_pad">
+                <button id="btnExport_recordsSearch" type="button" data-dojo-type="dijit/form/Button">Export</button>
+                <button id="btnFullScreen_recordsSearch" type="button" data-dojo-type="dijit/form/Button">Full Screen</button>
+            </div>
+    </div><!--l_row_pad-->
+            
+    <!--Update Exp Date -->
+	<div data-dojo-type="dijit.Dialog" style="display:none;" id="updateDialog_expDate" name="updateDialog_expDate" 
+		data-dojo-props="title:'Update Exp Date'">
+		<label for="newExpDates">Exp Date</label>
+         
+		<br>
+        <input type="text" id="expirationDate_recordsUpdate" data-dojo-type="dijit/form/DateTextBox"/>
+		<br>
+		<button id="saveBtn_expDate" type="button" data-dojo-type="dijit/form/Button">Save</button>
+		<button id="cancelBtn_expDate" type="button" data-dojo-type="dijit/form/Button">Cancel</button>		
+	</div>
+        
+</div>

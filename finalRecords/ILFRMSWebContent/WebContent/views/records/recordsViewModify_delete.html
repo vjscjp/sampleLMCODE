@@ -1,0 +1,66 @@
+<div>
+    <h3>View/Modify Record</h3>
+	<div id="displayErrorMsg_recordsViewModify"> </div>
+	<div id="displayInfoMsg_recordsViewModify"> </div>
+    <form id="modifyForm_recordsViewModify" data-dojo-type="dijit/form/Form">
+        <div id="content-container">
+            <div class="container column">
+                <label for="ddlRecordSource">* Record Source</label>
+                <select id="ddlRecordSource_recordsViewModify" data-dojo-type="dijit/form/Select" data-dojo-props="value: '',required:true" name="recordSource">
+                    <option value="internal">Internal</option>
+                    <option value="external">External</option>
+                </select>
+
+                <label for="ddlClass">* Classification</label>
+                <select id="ddlClass_recordsViewModify" data-dojo-type="dijit/form/FilteringSelect"  style="width: 200px;" 
+                value: "" name="classtnCd">
+                </select>
+
+                <label for="ddlSubClass">* Sub-Classification</label>
+                </select>
+                <select id="ddlSubClass_recordsViewModify" data-dojo-type="dijit/form/FilteringSelect"  style="width: 200px;" 
+                value: "" name="subclassificationCd">
+                </select>
+
+                <label>Record Title</label>
+                <input type="text" id="txtRecordTitle_recordsViewModify" name="recordTitle" data-dojo-type="dijit/form/ValidationTextBox" 
+                    data-dojo-props="maxlength:100" />
+
+                <label for="txtRecordNumber">* Record #</label>
+                <input type="text" id="txtRecordNumber_recordsViewModify" name="recordNumber" data-dojo-type="dijit/form/ValidationTextBox" 
+                    data-dojo-props="maxlength:100,required:true" />
+
+                <label for="effectiveDate">* Effective Date</label>
+                <input type="text" id="effectiveDate_recordsViewModify" data-dojo-type="dijit/form/DateTextBox" data-dojo-props="required:true" />
+
+                <label for="expirationDate">Expiration Date</label>
+                <input type="text" id="expirationDate_recordsViewModify" data-dojo-type="dijit/form/DateTextBox" />
+
+            </div>
+
+            <div class="container column">
+                <label for="ddlNPPI">* NPPI/PCI Designation</label>
+                <select id="ddlNPPI_recordsViewModify" data-dojo-type="dojox/form/CheckedMultiSelect"
+                           data-dojo-props="dropDown: true, multiple: true, required: true, sortByLabel:false"  name="nppiPciDesignations">
+                </select>
+                <label for="ddlTimingCode">Timing Code</label>
+                <select id="ddlTimingCode_recordsViewModify" data-dojo-type="dojox/form/CheckedMultiSelect" 
+                            data-dojo-props="dropDown: true, multiple: true, required: false" name="timingCds">
+                </select>
+
+                <label for="txtLunarDocType">* Lunar Doc Type</label>
+                <input type="text" id="txtLunarDocType_recordsViewModify" name="lunarDocTypeNm" data-dojo-props="maxlength:50,required:true" 
+                data-dojo-type="dijit/form/ValidationTextBox" />
+
+                <label for="RIC_recordsViewModify">RIC</label>
+                <textarea id="RIC_recordsViewModify" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="readOnly:true"></textarea>
+
+            </div>
+        </div>
+    </form>
+    <div>
+        <button id="saveBtn_recordsViewModify" type="button" data-dojo-type="dijit/form/Button">Save</button>
+        <button id="cancelBtn_recordsViewModify" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+        <button id="historyBtn_recordsViewModify" type="button" data-dojo-type="dijit/form/Button">History</button>        
+    </div>
+</div>

@@ -1,0 +1,53 @@
+<div>
+    <h3> Associate To Package </h3>
+	<div id="displayErrorMsg_formAsstnToPackage"> </div>
+	<div id="displayInfoMsg_formAsstnToPackage"> </div>
+	<div class="l_main_area">
+		<div class="l_row">
+			<div class="l_column_thirds">
+			
+				<label for="formNum_formAsstnToPackage">Form # :</label> 
+					<input type="text" id="formNum_formAsstnToPackage" data-dojo-type="dijit/form/TextBox" />
+				
+				<label for="revDate_formAsstnToPackage">Revision Date :</label>
+					<input type="text" id="revDate_formAsstnToPackage" data-dojo-type="dijit/form/TextBox" />
+				
+				<label for="formDesc_formAsstnToPackage">Form Description :</label>
+					<input type="text" id="formDesc_formAsstnToPackage" data-dojo-type="dijit/form/TextBox" />
+			</div>
+			<div class="l_column_thirds">
+				<label for="packageNames_formAsstnToPackage" id = "formTmplTpLbl_uploadFormTemplates">* Package Name :</label>
+                 <select id="packageNames_formAsstnToPackage" name="packageNames_formAsstnToPackage" 
+                            data-dojo-type="dojox/form/CheckedMultiSelect" data-dojo-props="dropDown: true, multiple: true">
+                </select>
+				<label for="packAsstnEffDt_formAsstnToPackage">* Association Effective Date</label>
+                        <input type="text" id="packAsstnEffDt_formAsstnToPackage" data-dojo-type="dijit/form/DateTextBox"/>
+				<label for="packAsstnExpDt_formAsstnToPackage">Association Expiration Date</label>
+                        <input type="text" id="packAsstnExpDt_formAsstnToPackage" data-dojo-type="dijit/form/DateTextBox"/>
+				
+				<label for="packQueryExcDt_formAsstnToPackage">Query Exception Date</label>
+                <select id="packQueryExcDt_formAsstnToPackage" 
+					style="width: 250px;" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props = "value:' ',placeHolder:'Loading..'"></select> 
+				<br>	
+				<button id = "addBtn_formAsstnToPackage" type="button" data-dojo-type="dijit/form/Button" >Add </button>
+			</div>
+			<div class="l_column_thirds">
+			</div>
+			<br>
+			
+			
+			<label for="associatedPackagesGrid_formAsstnToPackage" style = "font-weight:bold">Associated Packages :</label> 
+			<div id="associatedPackagesGrid_formAsstnToPackage" data-dojo-type = "dojox/grid/EnhancedGrid"></div>
+			<br>
+			
+			<button id="doneBtn_formAsstnToPackage" type="button" data-dojo-type="dijit/form/Button">Done</button>
+			<button id="cancelBtn_formAsstnToPackage" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+			
+			<br>
+			
+			
+		</div>
+	</div>
+	
+	
+</div>

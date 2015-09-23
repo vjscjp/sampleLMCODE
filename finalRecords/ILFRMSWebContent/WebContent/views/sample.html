@@ -1,0 +1,55 @@
+<!--must start with a main area div-->
+<div class="l_main_area">
+    
+    
+    <h3>Sample Style Page</h3>
+    
+<!--    use l_row or l_row_pad, l_row will have no padding as labels all have padding-->
+    <div class="l_row">
+        
+<!--        l_column_fourths, l_column_thirds, l_column_half can be used for floating accordingly. be sure to wrap it in l_row -->
+        <div class="l_column_thirds">
+<!--            all labels have padding before and after-->
+            <label>Package Name</label>
+            <input type="text" id="txtName_packageModify" data-dojo-type="dijit/form/TextBox"/>
+            
+            <label>RIC</label>
+            <input type="text" id="txtRIC_packageModify" data-dojo-type="dijit/form/TextBox"/>
+            
+            <label>Package Iteration</label>
+            <input id="selPackageIteration_packageModify">
+        </div><!--l_column_thirds-->
+        
+        <div class="l_column_thirds">
+            <label>Classification</label>
+            <input type="text" id="txtClassification_packageModify" data-dojo-type="dijit/form/TextBox"/>
+            
+            <label>Sub-Classifiacation</label>
+            <input type="text" id="txtSubClassification_packageModify" data-dojo-type="dijit/form/TextBox"/>
+            
+            <label>Query Date Parameter</label>
+            <input type="text" id="txtDate_packageModify" data-dojo-type="dijit/form/TextBox"/>
+        </div><!--l_column_thirds-->
+        
+        <div class="l_column_thirds">
+            <label>Package Effective Date</label>
+            <input type="text" id="txtEffective_packageModify" data-dojo-type="dijit/form/TextBox"/>
+            
+            <label>Package Expiration Date</label>
+            <input type="text" id="txtExpiration_packageModify" data-dojo-type="dijit/form/TextBox"/>
+
+        </div><!--l_column_thirds-->
+        
+    </div><!--l_row-->
+    
+<!--    all should be wrapped in l_row or l_row_pad if no labels are used-->
+    <div class="l_row_pad">
+        <div id="packageGridView"></div>
+    </div>
+    
+    <div class="l_row_pad">
+<!--        buttons can simply be stacked-->
+    	<button id="btnExport_packageModify" type="button" data-dojo-type="dijit/form/Button">Export</button>
+    	<button id="btnCancel_packageModify" type="button" data-dojo-type="dijit/form/Button">Cancel</button>
+    </div>
+</div>
